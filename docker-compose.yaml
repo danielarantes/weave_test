@@ -86,7 +86,7 @@ x-airflow-common:
       condition: service_healthy
 
 services:
-  neo4j:
+  graphdb:
     image: neo4j:latest
     expose:
       - 7474
@@ -175,6 +175,9 @@ services:
       timeout: 10s
       retries: 5
       start_period: 30s
+    links:
+      - "graphdb:graphdb"
+
     environment:
       <<: *airflow-common-env
       # Required to handle warm shutdown of the celery workers properly
@@ -316,3 +319,4 @@ services:
 
 volumes:
   postgres-db-volume:
+
