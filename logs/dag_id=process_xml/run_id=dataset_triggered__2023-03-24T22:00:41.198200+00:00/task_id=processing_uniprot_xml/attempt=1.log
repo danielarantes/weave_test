@@ -1,0 +1,1110 @@
+[2023-03-24T22:00:42.196+0000] {taskinstance.py:1084} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: process_xml.processing_uniprot_xml dataset_triggered__2023-03-24T22:00:41.198200+00:00 [queued]>
+[2023-03-24T22:00:42.205+0000] {taskinstance.py:1084} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: process_xml.processing_uniprot_xml dataset_triggered__2023-03-24T22:00:41.198200+00:00 [queued]>
+[2023-03-24T22:00:42.206+0000] {taskinstance.py:1282} INFO - 
+--------------------------------------------------------------------------------
+[2023-03-24T22:00:42.206+0000] {taskinstance.py:1283} INFO - Starting attempt 1 of 1
+[2023-03-24T22:00:42.206+0000] {taskinstance.py:1284} INFO - 
+--------------------------------------------------------------------------------
+[2023-03-24T22:00:42.226+0000] {taskinstance.py:1303} INFO - Executing <Task(BashOperator): processing_uniprot_xml> on 2023-03-24 22:00:41.198200+00:00
+[2023-03-24T22:00:42.231+0000] {standard_task_runner.py:55} INFO - Started process 770 to run task
+[2023-03-24T22:00:42.234+0000] {standard_task_runner.py:82} INFO - Running: ['***', 'tasks', 'run', 'process_xml', 'processing_uniprot_xml', 'dataset_triggered__2023-03-24T22:00:41.198200+00:00', '--job-id', '10', '--raw', '--subdir', 'DAGS_FOLDER/process_xml.py', '--cfg-path', '/tmp/tmp3gq027jk']
+[2023-03-24T22:00:42.234+0000] {standard_task_runner.py:83} INFO - Job 10: Subtask processing_uniprot_xml
+[2023-03-24T22:00:42.301+0000] {task_command.py:388} INFO - Running <TaskInstance: process_xml.processing_uniprot_xml dataset_triggered__2023-03-24T22:00:41.198200+00:00 [running]> on host e3353210e6de
+[2023-03-24T22:00:42.383+0000] {taskinstance.py:1511} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=process_xml
+AIRFLOW_CTX_TASK_ID=processing_uniprot_xml
+AIRFLOW_CTX_EXECUTION_DATE=2023-03-24T22:00:41.198200+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=dataset_triggered__2023-03-24T22:00:41.198200+00:00
+[2023-03-24T22:00:42.384+0000] {subprocess.py:63} INFO - Tmp dir root location: 
+ /tmp
+[2023-03-24T22:00:42.384+0000] {subprocess.py:75} INFO - Running command: ['/bin/bash', '-c', 'sleep 5 && cat /opt/***/data/test.txt']
+[2023-03-24T22:00:42.395+0000] {subprocess.py:86} INFO - Output:
+[2023-03-24T22:00:47.404+0000] {subprocess.py:93} INFO - <?xml version="1.0" encoding="UTF-8"  standalone="no" ?>
+[2023-03-24T22:00:47.405+0000] {subprocess.py:93} INFO - <uniprot xmlns="http://uniprot.org/uniprot" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://uniprot.org/uniprot http://www.uniprot.org/docs/uniprot.xsd">
+[2023-03-24T22:00:47.406+0000] {subprocess.py:93} INFO - <entry dataset="Swiss-Prot" created="2000-05-30" modified="2022-12-14" version="208" xmlns="http://uniprot.org/uniprot">
+[2023-03-24T22:00:47.406+0000] {subprocess.py:93} INFO -   <accession>Q9Y261</accession>
+[2023-03-24T22:00:47.407+0000] {subprocess.py:93} INFO -   <accession>Q8WUW4</accession>
+[2023-03-24T22:00:47.407+0000] {subprocess.py:93} INFO -   <accession>Q96DF7</accession>
+[2023-03-24T22:00:47.408+0000] {subprocess.py:93} INFO -   <name>FOXA2_HUMAN</name>
+[2023-03-24T22:00:47.408+0000] {subprocess.py:93} INFO -   <protein>
+[2023-03-24T22:00:47.409+0000] {subprocess.py:93} INFO -     <recommendedName>
+[2023-03-24T22:00:47.409+0000] {subprocess.py:93} INFO -       <fullName>Hepatocyte nuclear factor 3-beta</fullName>
+[2023-03-24T22:00:47.410+0000] {subprocess.py:93} INFO -       <shortName>HNF-3-beta</shortName>
+[2023-03-24T22:00:47.410+0000] {subprocess.py:93} INFO -       <shortName>HNF-3B</shortName>
+[2023-03-24T22:00:47.411+0000] {subprocess.py:93} INFO -     </recommendedName>
+[2023-03-24T22:00:47.411+0000] {subprocess.py:93} INFO -     <alternativeName>
+[2023-03-24T22:00:47.412+0000] {subprocess.py:93} INFO -       <fullName>Forkhead box protein A2</fullName>
+[2023-03-24T22:00:47.412+0000] {subprocess.py:93} INFO -     </alternativeName>
+[2023-03-24T22:00:47.412+0000] {subprocess.py:93} INFO -     <alternativeName>
+[2023-03-24T22:00:47.413+0000] {subprocess.py:93} INFO -       <fullName>Transcription factor 3B</fullName>
+[2023-03-24T22:00:47.413+0000] {subprocess.py:93} INFO -       <shortName>TCF-3B</shortName>
+[2023-03-24T22:00:47.413+0000] {subprocess.py:93} INFO -     </alternativeName>
+[2023-03-24T22:00:47.414+0000] {subprocess.py:93} INFO -   </protein>
+[2023-03-24T22:00:47.414+0000] {subprocess.py:93} INFO -   <gene>
+[2023-03-24T22:00:47.414+0000] {subprocess.py:93} INFO -     <name type="primary">FOXA2</name>
+[2023-03-24T22:00:47.415+0000] {subprocess.py:93} INFO -     <name type="synonym">HNF3B</name>
+[2023-03-24T22:00:47.415+0000] {subprocess.py:93} INFO -     <name type="synonym">TCF3B</name>
+[2023-03-24T22:00:47.415+0000] {subprocess.py:93} INFO -   </gene>
+[2023-03-24T22:00:47.416+0000] {subprocess.py:93} INFO -   <organism>
+[2023-03-24T22:00:47.416+0000] {subprocess.py:93} INFO -     <name type="scientific">Homo sapiens sapiens</name>
+[2023-03-24T22:00:47.416+0000] {subprocess.py:93} INFO -     <name type="common">Human</name>
+[2023-03-24T22:00:47.417+0000] {subprocess.py:93} INFO -     <dbReference type="NCBI Taxonomy" id="9606"/>
+[2023-03-24T22:00:47.417+0000] {subprocess.py:93} INFO -     <lineage>
+[2023-03-24T22:00:47.418+0000] {subprocess.py:93} INFO -       <taxon>Eukaryota</taxon>
+[2023-03-24T22:00:47.418+0000] {subprocess.py:93} INFO -       <taxon>Metazoa</taxon>
+[2023-03-24T22:00:47.418+0000] {subprocess.py:93} INFO -       <taxon>Chordata</taxon>
+[2023-03-24T22:00:47.419+0000] {subprocess.py:93} INFO -       <taxon>Craniata</taxon>
+[2023-03-24T22:00:47.419+0000] {subprocess.py:93} INFO -       <taxon>Vertebrata</taxon>
+[2023-03-24T22:00:47.419+0000] {subprocess.py:93} INFO -       <taxon>Euteleostomi</taxon>
+[2023-03-24T22:00:47.420+0000] {subprocess.py:93} INFO -       <taxon>Mammalia</taxon>
+[2023-03-24T22:00:47.420+0000] {subprocess.py:93} INFO -       <taxon>Eutheria</taxon>
+[2023-03-24T22:00:47.420+0000] {subprocess.py:93} INFO -       <taxon>Euarchontoglires</taxon>
+[2023-03-24T22:00:47.421+0000] {subprocess.py:93} INFO -       <taxon>Primates</taxon>
+[2023-03-24T22:00:47.421+0000] {subprocess.py:93} INFO -       <taxon>Haplorrhini</taxon>
+[2023-03-24T22:00:47.422+0000] {subprocess.py:93} INFO -       <taxon>Catarrhini</taxon>
+[2023-03-24T22:00:47.422+0000] {subprocess.py:93} INFO -       <taxon>Hominidae</taxon>
+[2023-03-24T22:00:47.422+0000] {subprocess.py:93} INFO -       <taxon>Homo</taxon>
+[2023-03-24T22:00:47.423+0000] {subprocess.py:93} INFO -     </lineage>
+[2023-03-24T22:00:47.423+0000] {subprocess.py:93} INFO -   </organism>
+[2023-03-24T22:00:47.424+0000] {subprocess.py:93} INFO -   <reference key="1">
+[2023-03-24T22:00:47.424+0000] {subprocess.py:93} INFO -     <citation type="journal article" date="2000" name="Diabetologia" volume="43" first="121" last="124">
+[2023-03-24T22:00:47.425+0000] {subprocess.py:93} INFO -       <title>Cloning of cDNA and the gene encoding human hepatocyte nuclear factor (HNF)-3 beta and mutation screening in Japanese subjects with maturity-onset diabetes of the young.</title>
+[2023-03-24T22:00:47.425+0000] {subprocess.py:93} INFO -       <authorList>
+[2023-03-24T22:00:47.426+0000] {subprocess.py:93} INFO -         <person name="Yamada S."/>
+[2023-03-24T22:00:47.426+0000] {subprocess.py:93} INFO -         <person name="Zhu Q."/>
+[2023-03-24T22:00:47.426+0000] {subprocess.py:93} INFO -         <person name="Aihara Y."/>
+[2023-03-24T22:00:47.427+0000] {subprocess.py:93} INFO -         <person name="Onda H."/>
+[2023-03-24T22:00:47.427+0000] {subprocess.py:93} INFO -         <person name="Zhang Z."/>
+[2023-03-24T22:00:47.427+0000] {subprocess.py:93} INFO -         <person name="Yu L."/>
+[2023-03-24T22:00:47.427+0000] {subprocess.py:93} INFO -         <person name="Jin L."/>
+[2023-03-24T22:00:47.428+0000] {subprocess.py:93} INFO -         <person name="Si Y.J."/>
+[2023-03-24T22:00:47.428+0000] {subprocess.py:93} INFO -         <person name="Nishigori H."/>
+[2023-03-24T22:00:47.428+0000] {subprocess.py:93} INFO -         <person name="Tomura H."/>
+[2023-03-24T22:00:47.428+0000] {subprocess.py:93} INFO -         <person name="Inoue I."/>
+[2023-03-24T22:00:47.429+0000] {subprocess.py:93} INFO -         <person name="Morikawa A."/>
+[2023-03-24T22:00:47.429+0000] {subprocess.py:93} INFO -         <person name="Yamagata K."/>
+[2023-03-24T22:00:47.429+0000] {subprocess.py:93} INFO -         <person name="Hanafusa T."/>
+[2023-03-24T22:00:47.429+0000] {subprocess.py:93} INFO -         <person name="Matsuzawa Y."/>
+[2023-03-24T22:00:47.429+0000] {subprocess.py:93} INFO -         <person name="Takeda J."/>
+[2023-03-24T22:00:47.430+0000] {subprocess.py:93} INFO -       </authorList>
+[2023-03-24T22:00:47.430+0000] {subprocess.py:93} INFO -       <dbReference type="PubMed" id="10672453"/>
+[2023-03-24T22:00:47.430+0000] {subprocess.py:93} INFO -       <dbReference type="DOI" id="10.1007/s001250050016"/>
+[2023-03-24T22:00:47.430+0000] {subprocess.py:93} INFO -     </citation>
+[2023-03-24T22:00:47.431+0000] {subprocess.py:93} INFO -     <scope>NUCLEOTIDE SEQUENCE [GENOMIC DNA / MRNA] (ISOFORM 1)</scope>
+[2023-03-24T22:00:47.431+0000] {subprocess.py:93} INFO -     <scope>VARIANT VAL-328</scope>
+[2023-03-24T22:00:47.431+0000] {subprocess.py:93} INFO -     <source>
+[2023-03-24T22:00:47.431+0000] {subprocess.py:93} INFO -       <tissue>Liver</tissue>
+[2023-03-24T22:00:47.431+0000] {subprocess.py:93} INFO -     </source>
+[2023-03-24T22:00:47.431+0000] {subprocess.py:93} INFO -   </reference>
+[2023-03-24T22:00:47.432+0000] {subprocess.py:93} INFO -   <reference key="2">
+[2023-03-24T22:00:47.432+0000] {subprocess.py:93} INFO -     <citation type="submission" date="1999-05" db="EMBL/GenBank/DDBJ databases">
+[2023-03-24T22:00:47.432+0000] {subprocess.py:93} INFO -       <title>No evidence for diabetes-associated mutations in the hepatocyte nuclear factor-3 beta gene in Japanese patients with MODY.</title>
+[2023-03-24T22:00:47.432+0000] {subprocess.py:93} INFO -       <authorList>
+[2023-03-24T22:00:47.432+0000] {subprocess.py:93} INFO -         <person name="Hinokio Y."/>
+[2023-03-24T22:00:47.433+0000] {subprocess.py:93} INFO -         <person name="Horikawa Y."/>
+[2023-03-24T22:00:47.433+0000] {subprocess.py:93} INFO -         <person name="Furuta H."/>
+[2023-03-24T22:00:47.433+0000] {subprocess.py:93} INFO -         <person name="Cox N.J."/>
+[2023-03-24T22:00:47.433+0000] {subprocess.py:93} INFO -         <person name="Iwasaki N."/>
+[2023-03-24T22:00:47.433+0000] {subprocess.py:93} INFO -         <person name="Honda M."/>
+[2023-03-24T22:00:47.433+0000] {subprocess.py:93} INFO -         <person name="Ogata M."/>
+[2023-03-24T22:00:47.434+0000] {subprocess.py:93} INFO -         <person name="Iwamoto Y."/>
+[2023-03-24T22:00:47.434+0000] {subprocess.py:93} INFO -         <person name="Bell G.I."/>
+[2023-03-24T22:00:47.434+0000] {subprocess.py:93} INFO -       </authorList>
+[2023-03-24T22:00:47.434+0000] {subprocess.py:93} INFO -     </citation>
+[2023-03-24T22:00:47.435+0000] {subprocess.py:93} INFO -     <scope>NUCLEOTIDE SEQUENCE [GENOMIC DNA]</scope>
+[2023-03-24T22:00:47.435+0000] {subprocess.py:93} INFO -   </reference>
+[2023-03-24T22:00:47.435+0000] {subprocess.py:93} INFO -   <reference key="3">
+[2023-03-24T22:00:47.435+0000] {subprocess.py:93} INFO -     <citation type="journal article" date="2000" name="Hum. Hered." volume="50" first="370" last="381">
+[2023-03-24T22:00:47.435+0000] {subprocess.py:93} INFO -       <title>The human HNF-3 genes: cloning, partial sequence and mutation screening in patients with impaired glucose homeostasis.</title>
+[2023-03-24T22:00:47.435+0000] {subprocess.py:93} INFO -       <authorList>
+[2023-03-24T22:00:47.436+0000] {subprocess.py:93} INFO -         <person name="Navas M.A."/>
+[2023-03-24T22:00:47.436+0000] {subprocess.py:93} INFO -         <person name="Vaisse C."/>
+[2023-03-24T22:00:47.436+0000] {subprocess.py:93} INFO -         <person name="Boger S."/>
+[2023-03-24T22:00:47.436+0000] {subprocess.py:93} INFO -         <person name="Heimesaat M."/>
+[2023-03-24T22:00:47.436+0000] {subprocess.py:93} INFO -         <person name="Kollee L.A."/>
+[2023-03-24T22:00:47.436+0000] {subprocess.py:93} INFO -         <person name="Stoffel M."/>
+[2023-03-24T22:00:47.436+0000] {subprocess.py:93} INFO -       </authorList>
+[2023-03-24T22:00:47.437+0000] {subprocess.py:93} INFO -       <dbReference type="PubMed" id="10899756"/>
+[2023-03-24T22:00:47.437+0000] {subprocess.py:93} INFO -       <dbReference type="DOI" id="10.1159/000022943"/>
+[2023-03-24T22:00:47.437+0000] {subprocess.py:93} INFO -     </citation>
+[2023-03-24T22:00:47.437+0000] {subprocess.py:93} INFO -     <scope>NUCLEOTIDE SEQUENCE [GENOMIC DNA]</scope>
+[2023-03-24T22:00:47.437+0000] {subprocess.py:93} INFO -   </reference>
+[2023-03-24T22:00:47.437+0000] {subprocess.py:93} INFO -   <reference key="4">
+[2023-03-24T22:00:47.438+0000] {subprocess.py:93} INFO -     <citation type="journal article" date="2001" name="Nature" volume="414" first="865" last="871">
+[2023-03-24T22:00:47.438+0000] {subprocess.py:93} INFO -       <title>The DNA sequence and comparative analysis of human chromosome 20.</title>
+[2023-03-24T22:00:47.438+0000] {subprocess.py:93} INFO -       <authorList>
+[2023-03-24T22:00:47.438+0000] {subprocess.py:93} INFO -         <person name="Deloukas P."/>
+[2023-03-24T22:00:47.438+0000] {subprocess.py:93} INFO -         <person name="Matthews L.H."/>
+[2023-03-24T22:00:47.438+0000] {subprocess.py:93} INFO -         <person name="Ashurst J.L."/>
+[2023-03-24T22:00:47.439+0000] {subprocess.py:93} INFO -         <person name="Burton J."/>
+[2023-03-24T22:00:47.439+0000] {subprocess.py:93} INFO -         <person name="Gilbert J.G.R."/>
+[2023-03-24T22:00:47.439+0000] {subprocess.py:93} INFO -         <person name="Jones M."/>
+[2023-03-24T22:00:47.439+0000] {subprocess.py:93} INFO -         <person name="Stavrides G."/>
+[2023-03-24T22:00:47.439+0000] {subprocess.py:93} INFO -         <person name="Almeida J.P."/>
+[2023-03-24T22:00:47.440+0000] {subprocess.py:93} INFO -         <person name="Babbage A.K."/>
+[2023-03-24T22:00:47.440+0000] {subprocess.py:93} INFO -         <person name="Bagguley C.L."/>
+[2023-03-24T22:00:47.440+0000] {subprocess.py:93} INFO -         <person name="Bailey J."/>
+[2023-03-24T22:00:47.440+0000] {subprocess.py:93} INFO -         <person name="Barlow K.F."/>
+[2023-03-24T22:00:47.440+0000] {subprocess.py:93} INFO -         <person name="Bates K.N."/>
+[2023-03-24T22:00:47.441+0000] {subprocess.py:93} INFO -         <person name="Beard L.M."/>
+[2023-03-24T22:00:47.441+0000] {subprocess.py:93} INFO -         <person name="Beare D.M."/>
+[2023-03-24T22:00:47.441+0000] {subprocess.py:93} INFO -         <person name="Beasley O.P."/>
+[2023-03-24T22:00:47.441+0000] {subprocess.py:93} INFO -         <person name="Bird C.P."/>
+[2023-03-24T22:00:47.441+0000] {subprocess.py:93} INFO -         <person name="Blakey S.E."/>
+[2023-03-24T22:00:47.441+0000] {subprocess.py:93} INFO -         <person name="Bridgeman A.M."/>
+[2023-03-24T22:00:47.441+0000] {subprocess.py:93} INFO -         <person name="Brown A.J."/>
+[2023-03-24T22:00:47.441+0000] {subprocess.py:93} INFO -         <person name="Buck D."/>
+[2023-03-24T22:00:47.442+0000] {subprocess.py:93} INFO -         <person name="Burrill W.D."/>
+[2023-03-24T22:00:47.442+0000] {subprocess.py:93} INFO -         <person name="Butler A.P."/>
+[2023-03-24T22:00:47.442+0000] {subprocess.py:93} INFO -         <person name="Carder C."/>
+[2023-03-24T22:00:47.442+0000] {subprocess.py:93} INFO -         <person name="Carter N.P."/>
+[2023-03-24T22:00:47.442+0000] {subprocess.py:93} INFO -         <person name="Chapman J.C."/>
+[2023-03-24T22:00:47.442+0000] {subprocess.py:93} INFO -         <person name="Clamp M."/>
+[2023-03-24T22:00:47.442+0000] {subprocess.py:93} INFO -         <person name="Clark G."/>
+[2023-03-24T22:00:47.442+0000] {subprocess.py:93} INFO -         <person name="Clark L.N."/>
+[2023-03-24T22:00:47.443+0000] {subprocess.py:93} INFO -         <person name="Clark S.Y."/>
+[2023-03-24T22:00:47.443+0000] {subprocess.py:93} INFO -         <person name="Clee C.M."/>
+[2023-03-24T22:00:47.443+0000] {subprocess.py:93} INFO -         <person name="Clegg S."/>
+[2023-03-24T22:00:47.443+0000] {subprocess.py:93} INFO -         <person name="Cobley V.E."/>
+[2023-03-24T22:00:47.443+0000] {subprocess.py:93} INFO -         <person name="Collier R.E."/>
+[2023-03-24T22:00:47.443+0000] {subprocess.py:93} INFO -         <person name="Connor R.E."/>
+[2023-03-24T22:00:47.443+0000] {subprocess.py:93} INFO -         <person name="Corby N.R."/>
+[2023-03-24T22:00:47.444+0000] {subprocess.py:93} INFO -         <person name="Coulson A."/>
+[2023-03-24T22:00:47.444+0000] {subprocess.py:93} INFO -         <person name="Coville G.J."/>
+[2023-03-24T22:00:47.444+0000] {subprocess.py:93} INFO -         <person name="Deadman R."/>
+[2023-03-24T22:00:47.444+0000] {subprocess.py:93} INFO -         <person name="Dhami P.D."/>
+[2023-03-24T22:00:47.444+0000] {subprocess.py:93} INFO -         <person name="Dunn M."/>
+[2023-03-24T22:00:47.444+0000] {subprocess.py:93} INFO -         <person name="Ellington A.G."/>
+[2023-03-24T22:00:47.444+0000] {subprocess.py:93} INFO -         <person name="Frankland J.A."/>
+[2023-03-24T22:00:47.444+0000] {subprocess.py:93} INFO -         <person name="Fraser A."/>
+[2023-03-24T22:00:47.444+0000] {subprocess.py:93} INFO -         <person name="French L."/>
+[2023-03-24T22:00:47.445+0000] {subprocess.py:93} INFO -         <person name="Garner P."/>
+[2023-03-24T22:00:47.445+0000] {subprocess.py:93} INFO -         <person name="Grafham D.V."/>
+[2023-03-24T22:00:47.445+0000] {subprocess.py:93} INFO -         <person name="Griffiths C."/>
+[2023-03-24T22:00:47.445+0000] {subprocess.py:93} INFO -         <person name="Griffiths M.N.D."/>
+[2023-03-24T22:00:47.445+0000] {subprocess.py:93} INFO -         <person name="Gwilliam R."/>
+[2023-03-24T22:00:47.445+0000] {subprocess.py:93} INFO -         <person name="Hall R.E."/>
+[2023-03-24T22:00:47.445+0000] {subprocess.py:93} INFO -         <person name="Hammond S."/>
+[2023-03-24T22:00:47.445+0000] {subprocess.py:93} INFO -         <person name="Harley J.L."/>
+[2023-03-24T22:00:47.445+0000] {subprocess.py:93} INFO -         <person name="Heath P.D."/>
+[2023-03-24T22:00:47.446+0000] {subprocess.py:93} INFO -         <person name="Ho S."/>
+[2023-03-24T22:00:47.446+0000] {subprocess.py:93} INFO -         <person name="Holden J.L."/>
+[2023-03-24T22:00:47.446+0000] {subprocess.py:93} INFO -         <person name="Howden P.J."/>
+[2023-03-24T22:00:47.446+0000] {subprocess.py:93} INFO -         <person name="Huckle E."/>
+[2023-03-24T22:00:47.446+0000] {subprocess.py:93} INFO -         <person name="Hunt A.R."/>
+[2023-03-24T22:00:47.446+0000] {subprocess.py:93} INFO -         <person name="Hunt S.E."/>
+[2023-03-24T22:00:47.446+0000] {subprocess.py:93} INFO -         <person name="Jekosch K."/>
+[2023-03-24T22:00:47.446+0000] {subprocess.py:93} INFO -         <person name="Johnson C.M."/>
+[2023-03-24T22:00:47.447+0000] {subprocess.py:93} INFO -         <person name="Johnson D."/>
+[2023-03-24T22:00:47.447+0000] {subprocess.py:93} INFO -         <person name="Kay M.P."/>
+[2023-03-24T22:00:47.447+0000] {subprocess.py:93} INFO -         <person name="Kimberley A.M."/>
+[2023-03-24T22:00:47.447+0000] {subprocess.py:93} INFO -         <person name="King A."/>
+[2023-03-24T22:00:47.447+0000] {subprocess.py:93} INFO -         <person name="Knights A."/>
+[2023-03-24T22:00:47.447+0000] {subprocess.py:93} INFO -         <person name="Laird G.K."/>
+[2023-03-24T22:00:47.447+0000] {subprocess.py:93} INFO -         <person name="Lawlor S."/>
+[2023-03-24T22:00:47.447+0000] {subprocess.py:93} INFO -         <person name="Lehvaeslaiho M.H."/>
+[2023-03-24T22:00:47.447+0000] {subprocess.py:93} INFO -         <person name="Leversha M.A."/>
+[2023-03-24T22:00:47.447+0000] {subprocess.py:93} INFO -         <person name="Lloyd C."/>
+[2023-03-24T22:00:47.448+0000] {subprocess.py:93} INFO -         <person name="Lloyd D.M."/>
+[2023-03-24T22:00:47.448+0000] {subprocess.py:93} INFO -         <person name="Lovell J.D."/>
+[2023-03-24T22:00:47.448+0000] {subprocess.py:93} INFO -         <person name="Marsh V.L."/>
+[2023-03-24T22:00:47.448+0000] {subprocess.py:93} INFO -         <person name="Martin S.L."/>
+[2023-03-24T22:00:47.448+0000] {subprocess.py:93} INFO -         <person name="McConnachie L.J."/>
+[2023-03-24T22:00:47.448+0000] {subprocess.py:93} INFO -         <person name="McLay K."/>
+[2023-03-24T22:00:47.448+0000] {subprocess.py:93} INFO -         <person name="McMurray A.A."/>
+[2023-03-24T22:00:47.448+0000] {subprocess.py:93} INFO -         <person name="Milne S.A."/>
+[2023-03-24T22:00:47.448+0000] {subprocess.py:93} INFO -         <person name="Mistry D."/>
+[2023-03-24T22:00:47.449+0000] {subprocess.py:93} INFO -         <person name="Moore M.J.F."/>
+[2023-03-24T22:00:47.449+0000] {subprocess.py:93} INFO -         <person name="Mullikin J.C."/>
+[2023-03-24T22:00:47.449+0000] {subprocess.py:93} INFO -         <person name="Nickerson T."/>
+[2023-03-24T22:00:47.449+0000] {subprocess.py:93} INFO -         <person name="Oliver K."/>
+[2023-03-24T22:00:47.449+0000] {subprocess.py:93} INFO -         <person name="Parker A."/>
+[2023-03-24T22:00:47.449+0000] {subprocess.py:93} INFO -         <person name="Patel R."/>
+[2023-03-24T22:00:47.449+0000] {subprocess.py:93} INFO -         <person name="Pearce T.A.V."/>
+[2023-03-24T22:00:47.449+0000] {subprocess.py:93} INFO -         <person name="Peck A.I."/>
+[2023-03-24T22:00:47.449+0000] {subprocess.py:93} INFO -         <person name="Phillimore B.J.C.T."/>
+[2023-03-24T22:00:47.449+0000] {subprocess.py:93} INFO -         <person name="Prathalingam S.R."/>
+[2023-03-24T22:00:47.450+0000] {subprocess.py:93} INFO -         <person name="Plumb R.W."/>
+[2023-03-24T22:00:47.450+0000] {subprocess.py:93} INFO -         <person name="Ramsay H."/>
+[2023-03-24T22:00:47.450+0000] {subprocess.py:93} INFO -         <person name="Rice C.M."/>
+[2023-03-24T22:00:47.450+0000] {subprocess.py:93} INFO -         <person name="Ross M.T."/>
+[2023-03-24T22:00:47.450+0000] {subprocess.py:93} INFO -         <person name="Scott C.E."/>
+[2023-03-24T22:00:47.450+0000] {subprocess.py:93} INFO -         <person name="Sehra H.K."/>
+[2023-03-24T22:00:47.450+0000] {subprocess.py:93} INFO -         <person name="Shownkeen R."/>
+[2023-03-24T22:00:47.450+0000] {subprocess.py:93} INFO -         <person name="Sims S."/>
+[2023-03-24T22:00:47.450+0000] {subprocess.py:93} INFO -         <person name="Skuce C.D."/>
+[2023-03-24T22:00:47.451+0000] {subprocess.py:93} INFO -         <person name="Smith M.L."/>
+[2023-03-24T22:00:47.451+0000] {subprocess.py:93} INFO -         <person name="Soderlund C."/>
+[2023-03-24T22:00:47.451+0000] {subprocess.py:93} INFO -         <person name="Steward C.A."/>
+[2023-03-24T22:00:47.451+0000] {subprocess.py:93} INFO -         <person name="Sulston J.E."/>
+[2023-03-24T22:00:47.451+0000] {subprocess.py:93} INFO -         <person name="Swann R.M."/>
+[2023-03-24T22:00:47.451+0000] {subprocess.py:93} INFO -         <person name="Sycamore N."/>
+[2023-03-24T22:00:47.451+0000] {subprocess.py:93} INFO -         <person name="Taylor R."/>
+[2023-03-24T22:00:47.451+0000] {subprocess.py:93} INFO -         <person name="Tee L."/>
+[2023-03-24T22:00:47.451+0000] {subprocess.py:93} INFO -         <person name="Thomas D.W."/>
+[2023-03-24T22:00:47.452+0000] {subprocess.py:93} INFO -         <person name="Thorpe A."/>
+[2023-03-24T22:00:47.452+0000] {subprocess.py:93} INFO -         <person name="Tracey A."/>
+[2023-03-24T22:00:47.452+0000] {subprocess.py:93} INFO -         <person name="Tromans A.C."/>
+[2023-03-24T22:00:47.452+0000] {subprocess.py:93} INFO -         <person name="Vaudin M."/>
+[2023-03-24T22:00:47.452+0000] {subprocess.py:93} INFO -         <person name="Wall M."/>
+[2023-03-24T22:00:47.452+0000] {subprocess.py:93} INFO -         <person name="Wallis J.M."/>
+[2023-03-24T22:00:47.452+0000] {subprocess.py:93} INFO -         <person name="Whitehead S.L."/>
+[2023-03-24T22:00:47.452+0000] {subprocess.py:93} INFO -         <person name="Whittaker P."/>
+[2023-03-24T22:00:47.452+0000] {subprocess.py:93} INFO -         <person name="Willey D.L."/>
+[2023-03-24T22:00:47.453+0000] {subprocess.py:93} INFO -         <person name="Williams L."/>
+[2023-03-24T22:00:47.453+0000] {subprocess.py:93} INFO -         <person name="Williams S.A."/>
+[2023-03-24T22:00:47.453+0000] {subprocess.py:93} INFO -         <person name="Wilming L."/>
+[2023-03-24T22:00:47.453+0000] {subprocess.py:93} INFO -         <person name="Wray P.W."/>
+[2023-03-24T22:00:47.453+0000] {subprocess.py:93} INFO -         <person name="Hubbard T."/>
+[2023-03-24T22:00:47.453+0000] {subprocess.py:93} INFO -         <person name="Durbin R.M."/>
+[2023-03-24T22:00:47.453+0000] {subprocess.py:93} INFO -         <person name="Bentley D.R."/>
+[2023-03-24T22:00:47.453+0000] {subprocess.py:93} INFO -         <person name="Beck S."/>
+[2023-03-24T22:00:47.453+0000] {subprocess.py:93} INFO -         <person name="Rogers J."/>
+[2023-03-24T22:00:47.454+0000] {subprocess.py:93} INFO -       </authorList>
+[2023-03-24T22:00:47.454+0000] {subprocess.py:93} INFO -       <dbReference type="PubMed" id="11780052"/>
+[2023-03-24T22:00:47.454+0000] {subprocess.py:93} INFO -       <dbReference type="DOI" id="10.1038/414865a"/>
+[2023-03-24T22:00:47.454+0000] {subprocess.py:93} INFO -     </citation>
+[2023-03-24T22:00:47.454+0000] {subprocess.py:93} INFO -     <scope>NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA]</scope>
+[2023-03-24T22:00:47.454+0000] {subprocess.py:93} INFO -   </reference>
+[2023-03-24T22:00:47.454+0000] {subprocess.py:93} INFO -   <reference key="5">
+[2023-03-24T22:00:47.455+0000] {subprocess.py:93} INFO -     <citation type="journal article" date="2004" name="Genome Res." volume="14" first="2121" last="2127">
+[2023-03-24T22:00:47.455+0000] {subprocess.py:93} INFO -       <title>The status, quality, and expansion of the NIH full-length cDNA project: the Mammalian Gene Collection (MGC).</title>
+[2023-03-24T22:00:47.455+0000] {subprocess.py:93} INFO -       <authorList>
+[2023-03-24T22:00:47.455+0000] {subprocess.py:93} INFO -         <consortium name="The MGC Project Team"/>
+[2023-03-24T22:00:47.455+0000] {subprocess.py:93} INFO -       </authorList>
+[2023-03-24T22:00:47.455+0000] {subprocess.py:93} INFO -       <dbReference type="PubMed" id="15489334"/>
+[2023-03-24T22:00:47.455+0000] {subprocess.py:93} INFO -       <dbReference type="DOI" id="10.1101/gr.2596504"/>
+[2023-03-24T22:00:47.456+0000] {subprocess.py:93} INFO -     </citation>
+[2023-03-24T22:00:47.456+0000] {subprocess.py:93} INFO -     <scope>NUCLEOTIDE SEQUENCE [LARGE SCALE MRNA] (ISOFORM 2)</scope>
+[2023-03-24T22:00:47.456+0000] {subprocess.py:93} INFO -     <source>
+[2023-03-24T22:00:47.456+0000] {subprocess.py:93} INFO -       <tissue>Lung</tissue>
+[2023-03-24T22:00:47.456+0000] {subprocess.py:93} INFO -     </source>
+[2023-03-24T22:00:47.456+0000] {subprocess.py:93} INFO -   </reference>
+[2023-03-24T22:00:47.457+0000] {subprocess.py:93} INFO -   <reference key="6">
+[2023-03-24T22:00:47.457+0000] {subprocess.py:93} INFO -     <citation type="journal article" date="2003" name="Proc. Natl. Acad. Sci. U.S.A." volume="100" first="11624" last="11629">
+[2023-03-24T22:00:47.457+0000] {subprocess.py:93} INFO -       <title>Insulin regulates the activity of forkhead transcription factor Hnf-3beta/Foxa-2 by Akt-mediated phosphorylation and nuclear/cytosolic localization.</title>
+[2023-03-24T22:00:47.457+0000] {subprocess.py:93} INFO -       <authorList>
+[2023-03-24T22:00:47.457+0000] {subprocess.py:93} INFO -         <person name="Wolfrum C."/>
+[2023-03-24T22:00:47.457+0000] {subprocess.py:93} INFO -         <person name="Besser D."/>
+[2023-03-24T22:00:47.457+0000] {subprocess.py:93} INFO -         <person name="Luca E."/>
+[2023-03-24T22:00:47.458+0000] {subprocess.py:93} INFO -         <person name="Stoffel M."/>
+[2023-03-24T22:00:47.458+0000] {subprocess.py:93} INFO -       </authorList>
+[2023-03-24T22:00:47.458+0000] {subprocess.py:93} INFO -       <dbReference type="PubMed" id="14500912"/>
+[2023-03-24T22:00:47.458+0000] {subprocess.py:93} INFO -       <dbReference type="DOI" id="10.1073/pnas.1931483100"/>
+[2023-03-24T22:00:47.458+0000] {subprocess.py:93} INFO -     </citation>
+[2023-03-24T22:00:47.458+0000] {subprocess.py:93} INFO -     <scope>SUBCELLULAR LOCATION</scope>
+[2023-03-24T22:00:47.458+0000] {subprocess.py:93} INFO -   </reference>
+[2023-03-24T22:00:47.458+0000] {subprocess.py:93} INFO -   <reference key="7">
+[2023-03-24T22:00:47.458+0000] {subprocess.py:93} INFO -     <citation type="journal article" date="2005" name="J. Biol. Chem." volume="280" first="16763" last="16771">
+[2023-03-24T22:00:47.458+0000] {subprocess.py:93} INFO -       <title>A hepatocyte nuclear factor-3 site in the fibrinogen beta promoter is important for interleukin 6-induced expression, and its activity is influenced by the adjacent -148C/T polymorphism.</title>
+[2023-03-24T22:00:47.459+0000] {subprocess.py:93} INFO -       <authorList>
+[2023-03-24T22:00:47.459+0000] {subprocess.py:93} INFO -         <person name="Verschuur M."/>
+[2023-03-24T22:00:47.459+0000] {subprocess.py:93} INFO -         <person name="de Jong M."/>
+[2023-03-24T22:00:47.459+0000] {subprocess.py:93} INFO -         <person name="Felida L."/>
+[2023-03-24T22:00:47.459+0000] {subprocess.py:93} INFO -         <person name="de Maat M.P."/>
+[2023-03-24T22:00:47.459+0000] {subprocess.py:93} INFO -         <person name="Vos H.L."/>
+[2023-03-24T22:00:47.459+0000] {subprocess.py:93} INFO -       </authorList>
+[2023-03-24T22:00:47.459+0000] {subprocess.py:93} INFO -       <dbReference type="PubMed" id="15737987"/>
+[2023-03-24T22:00:47.459+0000] {subprocess.py:93} INFO -       <dbReference type="DOI" id="10.1074/jbc.m501973200"/>
+[2023-03-24T22:00:47.459+0000] {subprocess.py:93} INFO -     </citation>
+[2023-03-24T22:00:47.459+0000] {subprocess.py:93} INFO -     <scope>PROMOTER-BINDING</scope>
+[2023-03-24T22:00:47.459+0000] {subprocess.py:93} INFO -   </reference>
+[2023-03-24T22:00:47.460+0000] {subprocess.py:93} INFO -   <reference key="8">
+[2023-03-24T22:00:47.460+0000] {subprocess.py:93} INFO -     <citation type="journal article" date="2009" name="Genome Biol." volume="10" first="R129.0" last="R129.0">
+[2023-03-24T22:00:47.460+0000] {subprocess.py:93} INFO -       <title>Differential binding and co-binding pattern of FOXA1 and FOXA3 and their relation to H3K4me3 in HepG2 cells revealed by ChIP-seq.</title>
+[2023-03-24T22:00:47.460+0000] {subprocess.py:93} INFO -       <authorList>
+[2023-03-24T22:00:47.460+0000] {subprocess.py:93} INFO -         <person name="Motallebipour M."/>
+[2023-03-24T22:00:47.460+0000] {subprocess.py:93} INFO -         <person name="Ameur A."/>
+[2023-03-24T22:00:47.460+0000] {subprocess.py:93} INFO -         <person name="Reddy Bysani M.S."/>
+[2023-03-24T22:00:47.460+0000] {subprocess.py:93} INFO -         <person name="Patra K."/>
+[2023-03-24T22:00:47.460+0000] {subprocess.py:93} INFO -         <person name="Wallerman O."/>
+[2023-03-24T22:00:47.460+0000] {subprocess.py:93} INFO -         <person name="Mangion J."/>
+[2023-03-24T22:00:47.460+0000] {subprocess.py:93} INFO -         <person name="Barker M.A."/>
+[2023-03-24T22:00:47.461+0000] {subprocess.py:93} INFO -         <person name="McKernan K.J."/>
+[2023-03-24T22:00:47.461+0000] {subprocess.py:93} INFO -         <person name="Komorowski J."/>
+[2023-03-24T22:00:47.461+0000] {subprocess.py:93} INFO -         <person name="Wadelius C."/>
+[2023-03-24T22:00:47.461+0000] {subprocess.py:93} INFO -       </authorList>
+[2023-03-24T22:00:47.461+0000] {subprocess.py:93} INFO -       <dbReference type="PubMed" id="19919681"/>
+[2023-03-24T22:00:47.461+0000] {subprocess.py:93} INFO -       <dbReference type="DOI" id="10.1186/gb-2009-10-11-r129"/>
+[2023-03-24T22:00:47.461+0000] {subprocess.py:93} INFO -     </citation>
+[2023-03-24T22:00:47.461+0000] {subprocess.py:93} INFO -     <scope>INTERACTION WITH FOXA1 AND FOXA3</scope>
+[2023-03-24T22:00:47.461+0000] {subprocess.py:93} INFO -   </reference>
+[2023-03-24T22:00:47.461+0000] {subprocess.py:93} INFO -   <reference key="9">
+[2023-03-24T22:00:47.461+0000] {subprocess.py:93} INFO -     <citation type="journal article" date="2009" name="J. Biol. Chem." volume="284" first="19915" last="19926">
+[2023-03-24T22:00:47.461+0000] {subprocess.py:93} INFO -       <title>Identification of DNA-dependent protein kinase as a cofactor for the forkhead transcription factor FoxA2.</title>
+[2023-03-24T22:00:47.461+0000] {subprocess.py:93} INFO -       <authorList>
+[2023-03-24T22:00:47.462+0000] {subprocess.py:93} INFO -         <person name="Nock A."/>
+[2023-03-24T22:00:47.462+0000] {subprocess.py:93} INFO -         <person name="Ascano J.M."/>
+[2023-03-24T22:00:47.462+0000] {subprocess.py:93} INFO -         <person name="Jones T."/>
+[2023-03-24T22:00:47.462+0000] {subprocess.py:93} INFO -         <person name="Barrero M.J."/>
+[2023-03-24T22:00:47.462+0000] {subprocess.py:93} INFO -         <person name="Sugiyama N."/>
+[2023-03-24T22:00:47.462+0000] {subprocess.py:93} INFO -         <person name="Tomita M."/>
+[2023-03-24T22:00:47.462+0000] {subprocess.py:93} INFO -         <person name="Ishihama Y."/>
+[2023-03-24T22:00:47.462+0000] {subprocess.py:93} INFO -         <person name="Malik S."/>
+[2023-03-24T22:00:47.462+0000] {subprocess.py:93} INFO -       </authorList>
+[2023-03-24T22:00:47.462+0000] {subprocess.py:93} INFO -       <dbReference type="PubMed" id="19478084"/>
+[2023-03-24T22:00:47.462+0000] {subprocess.py:93} INFO -       <dbReference type="DOI" id="10.1074/jbc.m109.016295"/>
+[2023-03-24T22:00:47.462+0000] {subprocess.py:93} INFO -     </citation>
+[2023-03-24T22:00:47.463+0000] {subprocess.py:93} INFO -     <scope>INTERACTION WITH PRKDC</scope>
+[2023-03-24T22:00:47.463+0000] {subprocess.py:93} INFO -   </reference>
+[2023-03-24T22:00:47.463+0000] {subprocess.py:93} INFO -   <reference key="10">
+[2023-03-24T22:00:47.463+0000] {subprocess.py:93} INFO -     <citation type="journal article" date="2014" name="J. Proteomics" volume="96" first="253" last="262">
+[2023-03-24T22:00:47.463+0000] {subprocess.py:93} INFO -       <title>An enzyme assisted RP-RPLC approach for in-depth analysis of human liver phosphoproteome.</title>
+[2023-03-24T22:00:47.463+0000] {subprocess.py:93} INFO -       <authorList>
+[2023-03-24T22:00:47.463+0000] {subprocess.py:93} INFO -         <person name="Bian Y."/>
+[2023-03-24T22:00:47.463+0000] {subprocess.py:93} INFO -         <person name="Song C."/>
+[2023-03-24T22:00:47.463+0000] {subprocess.py:93} INFO -         <person name="Cheng K."/>
+[2023-03-24T22:00:47.463+0000] {subprocess.py:93} INFO -         <person name="Dong M."/>
+[2023-03-24T22:00:47.463+0000] {subprocess.py:93} INFO -         <person name="Wang F."/>
+[2023-03-24T22:00:47.463+0000] {subprocess.py:93} INFO -         <person name="Huang J."/>
+[2023-03-24T22:00:47.464+0000] {subprocess.py:93} INFO -         <person name="Sun D."/>
+[2023-03-24T22:00:47.464+0000] {subprocess.py:93} INFO -         <person name="Wang L."/>
+[2023-03-24T22:00:47.464+0000] {subprocess.py:93} INFO -         <person name="Ye M."/>
+[2023-03-24T22:00:47.464+0000] {subprocess.py:93} INFO -         <person name="Zou H."/>
+[2023-03-24T22:00:47.464+0000] {subprocess.py:93} INFO -       </authorList>
+[2023-03-24T22:00:47.464+0000] {subprocess.py:93} INFO -       <dbReference type="PubMed" id="24275569"/>
+[2023-03-24T22:00:47.464+0000] {subprocess.py:93} INFO -       <dbReference type="DOI" id="10.1016/j.jprot.2013.11.014"/>
+[2023-03-24T22:00:47.464+0000] {subprocess.py:93} INFO -     </citation>
+[2023-03-24T22:00:47.464+0000] {subprocess.py:93} INFO -     <scope>PHOSPHORYLATION [LARGE SCALE ANALYSIS] AT SER-303 AND SER-309</scope>
+[2023-03-24T22:00:47.464+0000] {subprocess.py:93} INFO -     <scope>IDENTIFICATION BY MASS SPECTROMETRY [LARGE SCALE ANALYSIS]</scope>
+[2023-03-24T22:00:47.464+0000] {subprocess.py:93} INFO -     <source>
+[2023-03-24T22:00:47.464+0000] {subprocess.py:93} INFO -       <tissue>Liver</tissue>
+[2023-03-24T22:00:47.464+0000] {subprocess.py:93} INFO -     </source>
+[2023-03-24T22:00:47.465+0000] {subprocess.py:93} INFO -   </reference>
+[2023-03-24T22:00:47.465+0000] {subprocess.py:93} INFO -   <comment type="function">
+[2023-03-24T22:00:47.465+0000] {subprocess.py:93} INFO -     <text evidence="1">Transcription factor that is involved in embryonic development, establishment of tissue-specific gene expression and regulation of gene expression in differentiated tissues. Is thought to act as a 'pioneer' factor opening the compacted chromatin for other proteins through interactions with nucleosomal core histones and thereby replacing linker histones at target enhancer and/or promoter sites. Binds DNA with the consensus sequence 5'-[AC]A[AT]T[AG]TT[GT][AG][CT]T[CT]-3' (By similarity). In embryonic development is required for notochord formation. Involved in the development of multiple endoderm-derived organ systems such as the liver, pancreas and lungs; FOXA1 and FOXA2 seem to have at least in part redundant roles. Originally described as a transcription activator for a number of liver genes such as AFP, albumin, tyrosine aminotransferase, PEPCK, etc. Interacts with the cis-acting regulatory regions of these genes. Involved in glucose homeostasis; regulates the expression of genes important for glucose sensing in pancreatic beta-cells and glucose homeostasis. Involved in regulation of fat metabolism. Binds to fibrinogen beta promoter and is involved in IL6-induced fibrinogen beta transcriptional activation.</text>
+[2023-03-24T22:00:47.465+0000] {subprocess.py:93} INFO -   </comment>
+[2023-03-24T22:00:47.465+0000] {subprocess.py:93} INFO -   <comment type="subunit">
+[2023-03-24T22:00:47.465+0000] {subprocess.py:93} INFO -     <text evidence="1 8 9">Binds DNA as a monomer. Binds TLE1 (By similarity). Interacts with FOXA1 and FOXA3. Interacts with PRKDC.</text>
+[2023-03-24T22:00:47.465+0000] {subprocess.py:93} INFO -   </comment>
+[2023-03-24T22:00:47.465+0000] {subprocess.py:93} INFO -   <comment type="interaction">
+[2023-03-24T22:00:47.465+0000] {subprocess.py:93} INFO -     <interactant intactId="EBI-25830360">
+[2023-03-24T22:00:47.465+0000] {subprocess.py:93} INFO -       <id>Q9Y261-2</id>
+[2023-03-24T22:00:47.465+0000] {subprocess.py:93} INFO -     </interactant>
+[2023-03-24T22:00:47.465+0000] {subprocess.py:93} INFO -     <interactant intactId="EBI-640741">
+[2023-03-24T22:00:47.465+0000] {subprocess.py:93} INFO -       <id>P01023</id>
+[2023-03-24T22:00:47.466+0000] {subprocess.py:93} INFO -       <label>A2M</label>
+[2023-03-24T22:00:47.466+0000] {subprocess.py:93} INFO -     </interactant>
+[2023-03-24T22:00:47.466+0000] {subprocess.py:93} INFO -     <organismsDiffer>false</organismsDiffer>
+[2023-03-24T22:00:47.466+0000] {subprocess.py:93} INFO -     <experiments>3</experiments>
+[2023-03-24T22:00:47.466+0000] {subprocess.py:93} INFO -   </comment>
+[2023-03-24T22:00:47.466+0000] {subprocess.py:93} INFO -   <comment type="interaction">
+[2023-03-24T22:00:47.466+0000] {subprocess.py:93} INFO -     <interactant intactId="EBI-25830360">
+[2023-03-24T22:00:47.466+0000] {subprocess.py:93} INFO -       <id>Q9Y261-2</id>
+[2023-03-24T22:00:47.466+0000] {subprocess.py:93} INFO -     </interactant>
+[2023-03-24T22:00:47.466+0000] {subprocess.py:93} INFO -     <interactant intactId="EBI-10968534">
+[2023-03-24T22:00:47.466+0000] {subprocess.py:93} INFO -       <id>P50570-2</id>
+[2023-03-24T22:00:47.466+0000] {subprocess.py:93} INFO -       <label>DNM2</label>
+[2023-03-24T22:00:47.467+0000] {subprocess.py:93} INFO -     </interactant>
+[2023-03-24T22:00:47.467+0000] {subprocess.py:93} INFO -     <organismsDiffer>false</organismsDiffer>
+[2023-03-24T22:00:47.467+0000] {subprocess.py:93} INFO -     <experiments>3</experiments>
+[2023-03-24T22:00:47.467+0000] {subprocess.py:93} INFO -   </comment>
+[2023-03-24T22:00:47.467+0000] {subprocess.py:93} INFO -   <comment type="interaction">
+[2023-03-24T22:00:47.467+0000] {subprocess.py:93} INFO -     <interactant intactId="EBI-25830360">
+[2023-03-24T22:00:47.467+0000] {subprocess.py:93} INFO -       <id>Q9Y261-2</id>
+[2023-03-24T22:00:47.467+0000] {subprocess.py:93} INFO -     </interactant>
+[2023-03-24T22:00:47.467+0000] {subprocess.py:93} INFO -     <interactant intactId="EBI-744302">
+[2023-03-24T22:00:47.467+0000] {subprocess.py:93} INFO -       <id>P14136</id>
+[2023-03-24T22:00:47.468+0000] {subprocess.py:93} INFO -       <label>GFAP</label>
+[2023-03-24T22:00:47.468+0000] {subprocess.py:93} INFO -     </interactant>
+[2023-03-24T22:00:47.468+0000] {subprocess.py:93} INFO -     <organismsDiffer>false</organismsDiffer>
+[2023-03-24T22:00:47.468+0000] {subprocess.py:93} INFO -     <experiments>3</experiments>
+[2023-03-24T22:00:47.468+0000] {subprocess.py:93} INFO -   </comment>
+[2023-03-24T22:00:47.468+0000] {subprocess.py:93} INFO -   <comment type="interaction">
+[2023-03-24T22:00:47.468+0000] {subprocess.py:93} INFO -     <interactant intactId="EBI-25830360">
+[2023-03-24T22:00:47.468+0000] {subprocess.py:93} INFO -       <id>Q9Y261-2</id>
+[2023-03-24T22:00:47.468+0000] {subprocess.py:93} INFO -     </interactant>
+[2023-03-24T22:00:47.468+0000] {subprocess.py:93} INFO -     <interactant intactId="EBI-713665">
+[2023-03-24T22:00:47.468+0000] {subprocess.py:93} INFO -       <id>P19404</id>
+[2023-03-24T22:00:47.468+0000] {subprocess.py:93} INFO -       <label>NDUFV2</label>
+[2023-03-24T22:00:47.469+0000] {subprocess.py:93} INFO -     </interactant>
+[2023-03-24T22:00:47.469+0000] {subprocess.py:93} INFO -     <organismsDiffer>false</organismsDiffer>
+[2023-03-24T22:00:47.469+0000] {subprocess.py:93} INFO -     <experiments>3</experiments>
+[2023-03-24T22:00:47.469+0000] {subprocess.py:93} INFO -   </comment>
+[2023-03-24T22:00:47.469+0000] {subprocess.py:93} INFO -   <comment type="interaction">
+[2023-03-24T22:00:47.469+0000] {subprocess.py:93} INFO -     <interactant intactId="EBI-25830360">
+[2023-03-24T22:00:47.469+0000] {subprocess.py:93} INFO -       <id>Q9Y261-2</id>
+[2023-03-24T22:00:47.469+0000] {subprocess.py:93} INFO -     </interactant>
+[2023-03-24T22:00:47.469+0000] {subprocess.py:93} INFO -     <interactant intactId="EBI-5235340">
+[2023-03-24T22:00:47.469+0000] {subprocess.py:93} INFO -       <id>Q7Z699</id>
+[2023-03-24T22:00:47.469+0000] {subprocess.py:93} INFO -       <label>SPRED1</label>
+[2023-03-24T22:00:47.469+0000] {subprocess.py:93} INFO -     </interactant>
+[2023-03-24T22:00:47.469+0000] {subprocess.py:93} INFO -     <organismsDiffer>false</organismsDiffer>
+[2023-03-24T22:00:47.470+0000] {subprocess.py:93} INFO -     <experiments>3</experiments>
+[2023-03-24T22:00:47.470+0000] {subprocess.py:93} INFO -   </comment>
+[2023-03-24T22:00:47.470+0000] {subprocess.py:93} INFO -   <comment type="subcellular location">
+[2023-03-24T22:00:47.470+0000] {subprocess.py:93} INFO -     <subcellularLocation>
+[2023-03-24T22:00:47.470+0000] {subprocess.py:93} INFO -       <location evidence="4 7">Nucleus</location>
+[2023-03-24T22:00:47.470+0000] {subprocess.py:93} INFO -     </subcellularLocation>
+[2023-03-24T22:00:47.470+0000] {subprocess.py:93} INFO -     <subcellularLocation>
+[2023-03-24T22:00:47.470+0000] {subprocess.py:93} INFO -       <location evidence="7">Cytoplasm</location>
+[2023-03-24T22:00:47.470+0000] {subprocess.py:93} INFO -     </subcellularLocation>
+[2023-03-24T22:00:47.470+0000] {subprocess.py:93} INFO -     <text>Shuttles between the nucleus and cytoplasm in a CRM1-dependent manner; in response to insulin signaling via AKT1 is exported from the nucleus.</text>
+[2023-03-24T22:00:47.470+0000] {subprocess.py:93} INFO -   </comment>
+[2023-03-24T22:00:47.471+0000] {subprocess.py:93} INFO -   <comment type="alternative products">
+[2023-03-24T22:00:47.471+0000] {subprocess.py:93} INFO -     <event type="alternative splicing"/>
+[2023-03-24T22:00:47.471+0000] {subprocess.py:93} INFO -     <isoform>
+[2023-03-24T22:00:47.471+0000] {subprocess.py:93} INFO -       <id>Q9Y261-1</id>
+[2023-03-24T22:00:47.471+0000] {subprocess.py:93} INFO -       <name>1</name>
+[2023-03-24T22:00:47.471+0000] {subprocess.py:93} INFO -       <sequence type="displayed"/>
+[2023-03-24T22:00:47.471+0000] {subprocess.py:93} INFO -     </isoform>
+[2023-03-24T22:00:47.471+0000] {subprocess.py:93} INFO -     <isoform>
+[2023-03-24T22:00:47.471+0000] {subprocess.py:93} INFO -       <id>Q9Y261-2</id>
+[2023-03-24T22:00:47.471+0000] {subprocess.py:93} INFO -       <name>2</name>
+[2023-03-24T22:00:47.472+0000] {subprocess.py:93} INFO -       <sequence type="described" ref="VSP_041212"/>
+[2023-03-24T22:00:47.472+0000] {subprocess.py:93} INFO -     </isoform>
+[2023-03-24T22:00:47.472+0000] {subprocess.py:93} INFO -   </comment>
+[2023-03-24T22:00:47.472+0000] {subprocess.py:93} INFO -   <comment type="PTM">
+[2023-03-24T22:00:47.472+0000] {subprocess.py:93} INFO -     <text evidence="1">Phosphorylation on Thr-156 abolishes binding to target promoters and subsequent transcription activation upon insulin stimulation.</text>
+[2023-03-24T22:00:47.472+0000] {subprocess.py:93} INFO -   </comment>
+[2023-03-24T22:00:47.472+0000] {subprocess.py:93} INFO -   <comment type="sequence caution" evidence="11">
+[2023-03-24T22:00:47.472+0000] {subprocess.py:93} INFO -     <conflict type="erroneous initiation">
+[2023-03-24T22:00:47.472+0000] {subprocess.py:93} INFO -       <sequence resource="EMBL-CDS" id="AAH11780" version="1"/>
+[2023-03-24T22:00:47.472+0000] {subprocess.py:93} INFO -     </conflict>
+[2023-03-24T22:00:47.473+0000] {subprocess.py:93} INFO -     <text>Truncated N-terminus.</text>
+[2023-03-24T22:00:47.473+0000] {subprocess.py:93} INFO -   </comment>
+[2023-03-24T22:00:47.473+0000] {subprocess.py:93} INFO -   <comment type="online information" name="Wikipedia">
+[2023-03-24T22:00:47.473+0000] {subprocess.py:93} INFO -     <link uri="https://en.wikipedia.org/wiki/Hepatocyte_nuclear_factors"/>
+[2023-03-24T22:00:47.473+0000] {subprocess.py:93} INFO -     <text>Hepatocyte nuclear factors entry</text>
+[2023-03-24T22:00:47.473+0000] {subprocess.py:93} INFO -   </comment>
+[2023-03-24T22:00:47.473+0000] {subprocess.py:93} INFO -   <dbReference type="EMBL" id="AB028021">
+[2023-03-24T22:00:47.473+0000] {subprocess.py:93} INFO -     <property type="protein sequence ID" value="BAA78106.1"/>
+[2023-03-24T22:00:47.473+0000] {subprocess.py:93} INFO -     <property type="molecule type" value="mRNA"/>
+[2023-03-24T22:00:47.473+0000] {subprocess.py:93} INFO -   </dbReference>
+[2023-03-24T22:00:47.473+0000] {subprocess.py:93} INFO -   <dbReference type="EMBL" id="AF147787">
+[2023-03-24T22:00:47.473+0000] {subprocess.py:93} INFO -     <property type="protein sequence ID" value="AAD41081.1"/>
+[2023-03-24T22:00:47.473+0000] {subprocess.py:93} INFO -     <property type="molecule type" value="Genomic_DNA"/>
+[2023-03-24T22:00:47.474+0000] {subprocess.py:93} INFO -   </dbReference>
+[2023-03-24T22:00:47.474+0000] {subprocess.py:93} INFO -   <dbReference type="EMBL" id="AF176110">
+[2023-03-24T22:00:47.474+0000] {subprocess.py:93} INFO -     <property type="protein sequence ID" value="AAD51978.1"/>
+[2023-03-24T22:00:47.474+0000] {subprocess.py:93} INFO -     <property type="molecule type" value="Genomic_DNA"/>
+[2023-03-24T22:00:47.474+0000] {subprocess.py:93} INFO -   </dbReference>
+[2023-03-24T22:00:47.474+0000] {subprocess.py:93} INFO -   <dbReference type="EMBL" id="AL121722">
+[2023-03-24T22:00:47.474+0000] {subprocess.py:93} INFO -     <property type="status" value="NOT_ANNOTATED_CDS"/>
+[2023-03-24T22:00:47.474+0000] {subprocess.py:93} INFO -     <property type="molecule type" value="Genomic_DNA"/>
+[2023-03-24T22:00:47.474+0000] {subprocess.py:93} INFO -   </dbReference>
+[2023-03-24T22:00:47.474+0000] {subprocess.py:93} INFO -   <dbReference type="EMBL" id="BC006545">
+[2023-03-24T22:00:47.475+0000] {subprocess.py:93} INFO -     <property type="protein sequence ID" value="AAH06545.2"/>
+[2023-03-24T22:00:47.475+0000] {subprocess.py:93} INFO -     <property type="molecule type" value="mRNA"/>
+[2023-03-24T22:00:47.475+0000] {subprocess.py:93} INFO -   </dbReference>
+[2023-03-24T22:00:47.475+0000] {subprocess.py:93} INFO -   <dbReference type="EMBL" id="BC011780">
+[2023-03-24T22:00:47.475+0000] {subprocess.py:93} INFO -     <property type="protein sequence ID" value="AAH11780.1"/>
+[2023-03-24T22:00:47.475+0000] {subprocess.py:93} INFO -     <property type="status" value="ALT_INIT"/>
+[2023-03-24T22:00:47.475+0000] {subprocess.py:93} INFO -     <property type="molecule type" value="mRNA"/>
+[2023-03-24T22:00:47.475+0000] {subprocess.py:93} INFO -   </dbReference>
+[2023-03-24T22:00:47.475+0000] {subprocess.py:93} INFO -   <dbReference type="EMBL" id="BC019288">
+[2023-03-24T22:00:47.475+0000] {subprocess.py:93} INFO -     <property type="protein sequence ID" value="AAH19288.1"/>
+[2023-03-24T22:00:47.475+0000] {subprocess.py:93} INFO -     <property type="molecule type" value="mRNA"/>
+[2023-03-24T22:00:47.475+0000] {subprocess.py:93} INFO -   </dbReference>
+[2023-03-24T22:00:47.476+0000] {subprocess.py:93} INFO -   <dbReference type="CCDS" id="CCDS13147.1">
+[2023-03-24T22:00:47.476+0000] {subprocess.py:93} INFO -     <molecule id="Q9Y261-1"/>
+[2023-03-24T22:00:47.476+0000] {subprocess.py:93} INFO -   </dbReference>
+[2023-03-24T22:00:47.476+0000] {subprocess.py:93} INFO -   <dbReference type="CCDS" id="CCDS46585.1">
+[2023-03-24T22:00:47.476+0000] {subprocess.py:93} INFO -     <molecule id="Q9Y261-2"/>
+[2023-03-24T22:00:47.476+0000] {subprocess.py:93} INFO -   </dbReference>
+[2023-03-24T22:00:47.476+0000] {subprocess.py:93} INFO -   <dbReference type="RefSeq" id="NP_068556.2">
+[2023-03-24T22:00:47.476+0000] {subprocess.py:93} INFO -     <molecule id="Q9Y261-2"/>
+[2023-03-24T22:00:47.476+0000] {subprocess.py:93} INFO -     <property type="nucleotide sequence ID" value="NM_021784.4"/>
+[2023-03-24T22:00:47.476+0000] {subprocess.py:93} INFO -   </dbReference>
+[2023-03-24T22:00:47.476+0000] {subprocess.py:93} INFO -   <dbReference type="RefSeq" id="NP_710141.1">
+[2023-03-24T22:00:47.476+0000] {subprocess.py:93} INFO -     <molecule id="Q9Y261-1"/>
+[2023-03-24T22:00:47.476+0000] {subprocess.py:93} INFO -     <property type="nucleotide sequence ID" value="NM_153675.2"/>
+[2023-03-24T22:00:47.477+0000] {subprocess.py:93} INFO -   </dbReference>
+[2023-03-24T22:00:47.477+0000] {subprocess.py:93} INFO -   <dbReference type="PDB" id="5X07">
+[2023-03-24T22:00:47.477+0000] {subprocess.py:93} INFO -     <property type="method" value="X-ray"/>
+[2023-03-24T22:00:47.477+0000] {subprocess.py:93} INFO -     <property type="resolution" value="2.80 A"/>
+[2023-03-24T22:00:47.477+0000] {subprocess.py:93} INFO -     <property type="chains" value="C/F/I/L=157-258"/>
+[2023-03-24T22:00:47.477+0000] {subprocess.py:93} INFO -   </dbReference>
+[2023-03-24T22:00:47.477+0000] {subprocess.py:93} INFO -   <dbReference type="PDBsum" id="5X07"/>
+[2023-03-24T22:00:47.477+0000] {subprocess.py:93} INFO -   <dbReference type="AlphaFoldDB" id="Q9Y261"/>
+[2023-03-24T22:00:47.477+0000] {subprocess.py:93} INFO -   <dbReference type="SMR" id="Q9Y261"/>
+[2023-03-24T22:00:47.477+0000] {subprocess.py:93} INFO -   <dbReference type="BioGRID" id="109412">
+[2023-03-24T22:00:47.477+0000] {subprocess.py:93} INFO -     <property type="interactions" value="23"/>
+[2023-03-24T22:00:47.477+0000] {subprocess.py:93} INFO -   </dbReference>
+[2023-03-24T22:00:47.477+0000] {subprocess.py:93} INFO -   <dbReference type="IntAct" id="Q9Y261">
+[2023-03-24T22:00:47.478+0000] {subprocess.py:93} INFO -     <property type="interactions" value="16"/>
+[2023-03-24T22:00:47.478+0000] {subprocess.py:93} INFO -   </dbReference>
+[2023-03-24T22:00:47.478+0000] {subprocess.py:93} INFO -   <dbReference type="MINT" id="Q9Y261"/>
+[2023-03-24T22:00:47.478+0000] {subprocess.py:93} INFO -   <dbReference type="STRING" id="9606.ENSP00000400341"/>
+[2023-03-24T22:00:47.478+0000] {subprocess.py:93} INFO -   <dbReference type="iPTMnet" id="Q9Y261"/>
+[2023-03-24T22:00:47.478+0000] {subprocess.py:93} INFO -   <dbReference type="PhosphoSitePlus" id="Q9Y261"/>
+[2023-03-24T22:00:47.478+0000] {subprocess.py:93} INFO -   <dbReference type="BioMuta" id="FOXA2"/>
+[2023-03-24T22:00:47.478+0000] {subprocess.py:93} INFO -   <dbReference type="DMDM" id="8134491"/>
+[2023-03-24T22:00:47.478+0000] {subprocess.py:93} INFO -   <dbReference type="jPOST" id="Q9Y261"/>
+[2023-03-24T22:00:47.478+0000] {subprocess.py:93} INFO -   <dbReference type="MassIVE" id="Q9Y261"/>
+[2023-03-24T22:00:47.478+0000] {subprocess.py:93} INFO -   <dbReference type="MaxQB" id="Q9Y261"/>
+[2023-03-24T22:00:47.478+0000] {subprocess.py:93} INFO -   <dbReference type="PaxDb" id="Q9Y261"/>
+[2023-03-24T22:00:47.479+0000] {subprocess.py:93} INFO -   <dbReference type="PeptideAtlas" id="Q9Y261"/>
+[2023-03-24T22:00:47.479+0000] {subprocess.py:93} INFO -   <dbReference type="ProteomicsDB" id="85664">
+[2023-03-24T22:00:47.479+0000] {subprocess.py:93} INFO -     <molecule id="Q9Y261-1"/>
+[2023-03-24T22:00:47.479+0000] {subprocess.py:93} INFO -   </dbReference>
+[2023-03-24T22:00:47.479+0000] {subprocess.py:93} INFO -   <dbReference type="ProteomicsDB" id="85665">
+[2023-03-24T22:00:47.479+0000] {subprocess.py:93} INFO -     <molecule id="Q9Y261-2"/>
+[2023-03-24T22:00:47.479+0000] {subprocess.py:93} INFO -   </dbReference>
+[2023-03-24T22:00:47.479+0000] {subprocess.py:93} INFO -   <dbReference type="Antibodypedia" id="3772">
+[2023-03-24T22:00:47.479+0000] {subprocess.py:93} INFO -     <property type="antibodies" value="871 antibodies from 46 providers"/>
+[2023-03-24T22:00:47.479+0000] {subprocess.py:93} INFO -   </dbReference>
+[2023-03-24T22:00:47.479+0000] {subprocess.py:93} INFO -   <dbReference type="DNASU" id="3170"/>
+[2023-03-24T22:00:47.479+0000] {subprocess.py:93} INFO -   <dbReference type="Ensembl" id="ENST00000377115.4">
+[2023-03-24T22:00:47.479+0000] {subprocess.py:93} INFO -     <molecule id="Q9Y261-1"/>
+[2023-03-24T22:00:47.480+0000] {subprocess.py:93} INFO -     <property type="protein sequence ID" value="ENSP00000366319.4"/>
+[2023-03-24T22:00:47.480+0000] {subprocess.py:93} INFO -     <property type="gene ID" value="ENSG00000125798.15"/>
+[2023-03-24T22:00:47.480+0000] {subprocess.py:93} INFO -   </dbReference>
+[2023-03-24T22:00:47.480+0000] {subprocess.py:93} INFO -   <dbReference type="Ensembl" id="ENST00000419308.7">
+[2023-03-24T22:00:47.480+0000] {subprocess.py:93} INFO -     <molecule id="Q9Y261-2"/>
+[2023-03-24T22:00:47.480+0000] {subprocess.py:93} INFO -     <property type="protein sequence ID" value="ENSP00000400341.3"/>
+[2023-03-24T22:00:47.480+0000] {subprocess.py:93} INFO -     <property type="gene ID" value="ENSG00000125798.15"/>
+[2023-03-24T22:00:47.480+0000] {subprocess.py:93} INFO -   </dbReference>
+[2023-03-24T22:00:47.480+0000] {subprocess.py:93} INFO -   <dbReference type="GeneID" id="3170"/>
+[2023-03-24T22:00:47.480+0000] {subprocess.py:93} INFO -   <dbReference type="KEGG" id="hsa:3170"/>
+[2023-03-24T22:00:47.480+0000] {subprocess.py:93} INFO -   <dbReference type="MANE-Select" id="ENST00000419308.7">
+[2023-03-24T22:00:47.480+0000] {subprocess.py:93} INFO -     <molecule id="Q9Y261-2"/>
+[2023-03-24T22:00:47.481+0000] {subprocess.py:93} INFO -     <property type="protein sequence ID" value="ENSP00000400341.3"/>
+[2023-03-24T22:00:47.481+0000] {subprocess.py:93} INFO -     <property type="RefSeq nucleotide sequence ID" value="NM_021784.5"/>
+[2023-03-24T22:00:47.481+0000] {subprocess.py:93} INFO -     <property type="RefSeq protein sequence ID" value="NP_068556.2"/>
+[2023-03-24T22:00:47.481+0000] {subprocess.py:93} INFO -   </dbReference>
+[2023-03-24T22:00:47.481+0000] {subprocess.py:93} INFO -   <dbReference type="UCSC" id="uc002wsm.4">
+[2023-03-24T22:00:47.481+0000] {subprocess.py:93} INFO -     <molecule id="Q9Y261-1"/>
+[2023-03-24T22:00:47.481+0000] {subprocess.py:93} INFO -     <property type="organism name" value="human"/>
+[2023-03-24T22:00:47.481+0000] {subprocess.py:93} INFO -   </dbReference>
+[2023-03-24T22:00:47.481+0000] {subprocess.py:93} INFO -   <dbReference type="AGR" id="HGNC:5022"/>
+[2023-03-24T22:00:47.481+0000] {subprocess.py:93} INFO -   <dbReference type="CTD" id="3170"/>
+[2023-03-24T22:00:47.481+0000] {subprocess.py:93} INFO -   <dbReference type="DisGeNET" id="3170"/>
+[2023-03-24T22:00:47.481+0000] {subprocess.py:93} INFO -   <dbReference type="GeneCards" id="FOXA2"/>
+[2023-03-24T22:00:47.481+0000] {subprocess.py:93} INFO -   <dbReference type="HGNC" id="HGNC:5022">
+[2023-03-24T22:00:47.482+0000] {subprocess.py:93} INFO -     <property type="gene designation" value="FOXA2"/>
+[2023-03-24T22:00:47.482+0000] {subprocess.py:93} INFO -   </dbReference>
+[2023-03-24T22:00:47.482+0000] {subprocess.py:93} INFO -   <dbReference type="HPA" id="ENSG00000125798">
+[2023-03-24T22:00:47.482+0000] {subprocess.py:93} INFO -     <property type="expression patterns" value="Tissue enhanced (liver, pancreas, stomach)"/>
+[2023-03-24T22:00:47.482+0000] {subprocess.py:93} INFO -   </dbReference>
+[2023-03-24T22:00:47.482+0000] {subprocess.py:93} INFO -   <dbReference type="MalaCards" id="FOXA2"/>
+[2023-03-24T22:00:47.482+0000] {subprocess.py:93} INFO -   <dbReference type="MIM" id="600288">
+[2023-03-24T22:00:47.482+0000] {subprocess.py:93} INFO -     <property type="type" value="gene"/>
+[2023-03-24T22:00:47.482+0000] {subprocess.py:93} INFO -   </dbReference>
+[2023-03-24T22:00:47.482+0000] {subprocess.py:93} INFO -   <dbReference type="neXtProt" id="NX_Q9Y261"/>
+[2023-03-24T22:00:47.482+0000] {subprocess.py:93} INFO -   <dbReference type="OpenTargets" id="ENSG00000125798"/>
+[2023-03-24T22:00:47.482+0000] {subprocess.py:93} INFO -   <dbReference type="Orphanet" id="95494">
+[2023-03-24T22:00:47.483+0000] {subprocess.py:93} INFO -     <property type="disease" value="Combined pituitary hormone deficiencies, genetic forms"/>
+[2023-03-24T22:00:47.483+0000] {subprocess.py:93} INFO -   </dbReference>
+[2023-03-24T22:00:47.483+0000] {subprocess.py:93} INFO -   <dbReference type="PharmGKB" id="PA201091"/>
+[2023-03-24T22:00:47.483+0000] {subprocess.py:93} INFO -   <dbReference type="VEuPathDB" id="HostDB:ENSG00000125798"/>
+[2023-03-24T22:00:47.483+0000] {subprocess.py:93} INFO -   <dbReference type="eggNOG" id="KOG3563">
+[2023-03-24T22:00:47.483+0000] {subprocess.py:93} INFO -     <property type="taxonomic scope" value="Eukaryota"/>
+[2023-03-24T22:00:47.483+0000] {subprocess.py:93} INFO -   </dbReference>
+[2023-03-24T22:00:47.483+0000] {subprocess.py:93} INFO -   <dbReference type="GeneTree" id="ENSGT00940000155999"/>
+[2023-03-24T22:00:47.483+0000] {subprocess.py:93} INFO -   <dbReference type="HOGENOM" id="CLU_027910_4_1_1"/>
+[2023-03-24T22:00:47.483+0000] {subprocess.py:93} INFO -   <dbReference type="InParanoid" id="Q9Y261"/>
+[2023-03-24T22:00:47.483+0000] {subprocess.py:93} INFO -   <dbReference type="OMA" id="GMGASMT"/>
+[2023-03-24T22:00:47.483+0000] {subprocess.py:93} INFO -   <dbReference type="PhylomeDB" id="Q9Y261"/>
+[2023-03-24T22:00:47.483+0000] {subprocess.py:93} INFO -   <dbReference type="TreeFam" id="TF316127"/>
+[2023-03-24T22:00:47.483+0000] {subprocess.py:93} INFO -   <dbReference type="PathwayCommons" id="Q9Y261"/>
+[2023-03-24T22:00:47.484+0000] {subprocess.py:93} INFO -   <dbReference type="Reactome" id="R-HSA-210745">
+[2023-03-24T22:00:47.484+0000] {subprocess.py:93} INFO -     <property type="pathway name" value="Regulation of gene expression in beta cells"/>
+[2023-03-24T22:00:47.484+0000] {subprocess.py:93} INFO -   </dbReference>
+[2023-03-24T22:00:47.484+0000] {subprocess.py:93} INFO -   <dbReference type="SignaLink" id="Q9Y261"/>
+[2023-03-24T22:00:47.484+0000] {subprocess.py:93} INFO -   <dbReference type="SIGNOR" id="Q9Y261"/>
+[2023-03-24T22:00:47.484+0000] {subprocess.py:93} INFO -   <dbReference type="BioGRID-ORCS" id="3170">
+[2023-03-24T22:00:47.486+0000] {subprocess.py:93} INFO -     <property type="hits" value="36 hits in 1090 CRISPR screens"/>
+[2023-03-24T22:00:47.486+0000] {subprocess.py:93} INFO -   </dbReference>
+[2023-03-24T22:00:47.486+0000] {subprocess.py:93} INFO -   <dbReference type="ChiTaRS" id="FOXA2">
+[2023-03-24T22:00:47.486+0000] {subprocess.py:93} INFO -     <property type="organism name" value="human"/>
+[2023-03-24T22:00:47.486+0000] {subprocess.py:93} INFO -   </dbReference>
+[2023-03-24T22:00:47.486+0000] {subprocess.py:93} INFO -   <dbReference type="GeneWiki" id="FOXA2"/>
+[2023-03-24T22:00:47.486+0000] {subprocess.py:93} INFO -   <dbReference type="GenomeRNAi" id="3170"/>
+[2023-03-24T22:00:47.486+0000] {subprocess.py:93} INFO -   <dbReference type="Pharos" id="Q9Y261">
+[2023-03-24T22:00:47.486+0000] {subprocess.py:93} INFO -     <property type="development level" value="Tbio"/>
+[2023-03-24T22:00:47.487+0000] {subprocess.py:93} INFO -   </dbReference>
+[2023-03-24T22:00:47.487+0000] {subprocess.py:93} INFO -   <dbReference type="PRO" id="PR:Q9Y261"/>
+[2023-03-24T22:00:47.487+0000] {subprocess.py:93} INFO -   <dbReference type="Proteomes" id="UP000005640">
+[2023-03-24T22:00:47.487+0000] {subprocess.py:93} INFO -     <property type="component" value="Chromosome 20"/>
+[2023-03-24T22:00:47.487+0000] {subprocess.py:93} INFO -   </dbReference>
+[2023-03-24T22:00:47.487+0000] {subprocess.py:93} INFO -   <dbReference type="RNAct" id="Q9Y261">
+[2023-03-24T22:00:47.487+0000] {subprocess.py:93} INFO -     <property type="molecule type" value="protein"/>
+[2023-03-24T22:00:47.487+0000] {subprocess.py:93} INFO -   </dbReference>
+[2023-03-24T22:00:47.487+0000] {subprocess.py:93} INFO -   <dbReference type="Bgee" id="ENSG00000125798">
+[2023-03-24T22:00:47.487+0000] {subprocess.py:93} INFO -     <property type="expression patterns" value="Expressed in pancreatic ductal cell and 85 other tissues"/>
+[2023-03-24T22:00:47.487+0000] {subprocess.py:93} INFO -   </dbReference>
+[2023-03-24T22:00:47.487+0000] {subprocess.py:93} INFO -   <dbReference type="ExpressionAtlas" id="Q9Y261">
+[2023-03-24T22:00:47.488+0000] {subprocess.py:93} INFO -     <property type="expression patterns" value="baseline and differential"/>
+[2023-03-24T22:00:47.488+0000] {subprocess.py:93} INFO -   </dbReference>
+[2023-03-24T22:00:47.488+0000] {subprocess.py:93} INFO -   <dbReference type="Genevisible" id="Q9Y261">
+[2023-03-24T22:00:47.488+0000] {subprocess.py:93} INFO -     <property type="organism ID" value="HS"/>
+[2023-03-24T22:00:47.488+0000] {subprocess.py:93} INFO -   </dbReference>
+[2023-03-24T22:00:47.488+0000] {subprocess.py:93} INFO -   <dbReference type="GO" id="GO:0030054">
+[2023-03-24T22:00:47.488+0000] {subprocess.py:93} INFO -     <property type="term" value="C:cell junction"/>
+[2023-03-24T22:00:47.488+0000] {subprocess.py:93} INFO -     <property type="evidence" value="ECO:0000314"/>
+[2023-03-24T22:00:47.489+0000] {subprocess.py:93} INFO -     <property type="project" value="HPA"/>
+[2023-03-24T22:00:47.489+0000] {subprocess.py:93} INFO -   </dbReference>
+[2023-03-24T22:00:47.489+0000] {subprocess.py:93} INFO -   <dbReference type="GO" id="GO:0000785">
+[2023-03-24T22:00:47.489+0000] {subprocess.py:93} INFO -     <property type="term" value="C:chromatin"/>
+[2023-03-24T22:00:47.489+0000] {subprocess.py:93} INFO -     <property type="evidence" value="ECO:0000247"/>
+[2023-03-24T22:00:47.489+0000] {subprocess.py:93} INFO -     <property type="project" value="NTNU_SB"/>
+[2023-03-24T22:00:47.489+0000] {subprocess.py:93} INFO -   </dbReference>
+[2023-03-24T22:00:47.489+0000] {subprocess.py:93} INFO -   <dbReference type="GO" id="GO:0005737">
+[2023-03-24T22:00:47.490+0000] {subprocess.py:93} INFO -     <property type="term" value="C:cytoplasm"/>
+[2023-03-24T22:00:47.490+0000] {subprocess.py:93} INFO -     <property type="evidence" value="ECO:0007669"/>
+[2023-03-24T22:00:47.490+0000] {subprocess.py:93} INFO -     <property type="project" value="UniProtKB-SubCell"/>
+[2023-03-24T22:00:47.490+0000] {subprocess.py:93} INFO -   </dbReference>
+[2023-03-24T22:00:47.490+0000] {subprocess.py:93} INFO -   <dbReference type="GO" id="GO:0005654">
+[2023-03-24T22:00:47.490+0000] {subprocess.py:93} INFO -     <property type="term" value="C:nucleoplasm"/>
+[2023-03-24T22:00:47.490+0000] {subprocess.py:93} INFO -     <property type="evidence" value="ECO:0000314"/>
+[2023-03-24T22:00:47.490+0000] {subprocess.py:93} INFO -     <property type="project" value="HPA"/>
+[2023-03-24T22:00:47.490+0000] {subprocess.py:93} INFO -   </dbReference>
+[2023-03-24T22:00:47.490+0000] {subprocess.py:93} INFO -   <dbReference type="GO" id="GO:0005634">
+[2023-03-24T22:00:47.491+0000] {subprocess.py:93} INFO -     <property type="term" value="C:nucleus"/>
+[2023-03-24T22:00:47.491+0000] {subprocess.py:93} INFO -     <property type="evidence" value="ECO:0000314"/>
+[2023-03-24T22:00:47.491+0000] {subprocess.py:93} INFO -     <property type="project" value="UniProtKB"/>
+[2023-03-24T22:00:47.491+0000] {subprocess.py:93} INFO -   </dbReference>
+[2023-03-24T22:00:47.491+0000] {subprocess.py:93} INFO -   <dbReference type="GO" id="GO:0003677">
+[2023-03-24T22:00:47.491+0000] {subprocess.py:93} INFO -     <property type="term" value="F:DNA binding"/>
+[2023-03-24T22:00:47.491+0000] {subprocess.py:93} INFO -     <property type="evidence" value="ECO:0000314"/>
+[2023-03-24T22:00:47.491+0000] {subprocess.py:93} INFO -     <property type="project" value="UniProtKB"/>
+[2023-03-24T22:00:47.491+0000] {subprocess.py:93} INFO -   </dbReference>
+[2023-03-24T22:00:47.491+0000] {subprocess.py:93} INFO -   <dbReference type="GO" id="GO:0003700">
+[2023-03-24T22:00:47.491+0000] {subprocess.py:93} INFO -     <property type="term" value="F:DNA-binding transcription factor activity"/>
+[2023-03-24T22:00:47.491+0000] {subprocess.py:93} INFO -     <property type="evidence" value="ECO:0000314"/>
+[2023-03-24T22:00:47.492+0000] {subprocess.py:93} INFO -     <property type="project" value="UniProtKB"/>
+[2023-03-24T22:00:47.492+0000] {subprocess.py:93} INFO -   </dbReference>
+[2023-03-24T22:00:47.492+0000] {subprocess.py:93} INFO -   <dbReference type="GO" id="GO:0000981">
+[2023-03-24T22:00:47.492+0000] {subprocess.py:93} INFO -     <property type="term" value="F:DNA-binding transcription factor activity, RNA polymerase II-specific"/>
+[2023-03-24T22:00:47.492+0000] {subprocess.py:93} INFO -     <property type="evidence" value="ECO:0000247"/>
+[2023-03-24T22:00:47.492+0000] {subprocess.py:93} INFO -     <property type="project" value="NTNU_SB"/>
+[2023-03-24T22:00:47.492+0000] {subprocess.py:93} INFO -   </dbReference>
+[2023-03-24T22:00:47.492+0000] {subprocess.py:93} INFO -   <dbReference type="GO" id="GO:0003676">
+[2023-03-24T22:00:47.492+0000] {subprocess.py:93} INFO -     <property type="term" value="F:nucleic acid binding"/>
+[2023-03-24T22:00:47.492+0000] {subprocess.py:93} INFO -     <property type="evidence" value="ECO:0000269"/>
+[2023-03-24T22:00:47.492+0000] {subprocess.py:93} INFO -     <property type="project" value="DisProt"/>
+[2023-03-24T22:00:47.492+0000] {subprocess.py:93} INFO -   </dbReference>
+[2023-03-24T22:00:47.492+0000] {subprocess.py:93} INFO -   <dbReference type="GO" id="GO:0019904">
+[2023-03-24T22:00:47.493+0000] {subprocess.py:93} INFO -     <property type="term" value="F:protein domain specific binding"/>
+[2023-03-24T22:00:47.493+0000] {subprocess.py:93} INFO -     <property type="evidence" value="ECO:0007669"/>
+[2023-03-24T22:00:47.493+0000] {subprocess.py:93} INFO -     <property type="project" value="InterPro"/>
+[2023-03-24T22:00:47.493+0000] {subprocess.py:93} INFO -   </dbReference>
+[2023-03-24T22:00:47.493+0000] {subprocess.py:93} INFO -   <dbReference type="GO" id="GO:0000978">
+[2023-03-24T22:00:47.493+0000] {subprocess.py:93} INFO -     <property type="term" value="F:RNA polymerase II cis-regulatory region sequence-specific DNA binding"/>
+[2023-03-24T22:00:47.493+0000] {subprocess.py:93} INFO -     <property type="evidence" value="ECO:0000314"/>
+[2023-03-24T22:00:47.493+0000] {subprocess.py:93} INFO -     <property type="project" value="BHF-UCL"/>
+[2023-03-24T22:00:47.493+0000] {subprocess.py:93} INFO -   </dbReference>
+[2023-03-24T22:00:47.493+0000] {subprocess.py:93} INFO -   <dbReference type="GO" id="GO:1990837">
+[2023-03-24T22:00:47.493+0000] {subprocess.py:93} INFO -     <property type="term" value="F:sequence-specific double-stranded DNA binding"/>
+[2023-03-24T22:00:47.493+0000] {subprocess.py:93} INFO -     <property type="evidence" value="ECO:0000314"/>
+[2023-03-24T22:00:47.493+0000] {subprocess.py:93} INFO -     <property type="project" value="ARUK-UCL"/>
+[2023-03-24T22:00:47.494+0000] {subprocess.py:93} INFO -   </dbReference>
+[2023-03-24T22:00:47.494+0000] {subprocess.py:93} INFO -   <dbReference type="GO" id="GO:0000976">
+[2023-03-24T22:00:47.494+0000] {subprocess.py:93} INFO -     <property type="term" value="F:transcription cis-regulatory region binding"/>
+[2023-03-24T22:00:47.494+0000] {subprocess.py:93} INFO -     <property type="evidence" value="ECO:0000315"/>
+[2023-03-24T22:00:47.494+0000] {subprocess.py:93} INFO -     <property type="project" value="UniProtKB"/>
+[2023-03-24T22:00:47.494+0000] {subprocess.py:93} INFO -   </dbReference>
+[2023-03-24T22:00:47.494+0000] {subprocess.py:93} INFO -   <dbReference type="GO" id="GO:0008344">
+[2023-03-24T22:00:47.494+0000] {subprocess.py:93} INFO -     <property type="term" value="P:adult locomotory behavior"/>
+[2023-03-24T22:00:47.494+0000] {subprocess.py:93} INFO -     <property type="evidence" value="ECO:0000250"/>
+[2023-03-24T22:00:47.494+0000] {subprocess.py:93} INFO -     <property type="project" value="ParkinsonsUK-UCL"/>
+[2023-03-24T22:00:47.494+0000] {subprocess.py:93} INFO -   </dbReference>
+[2023-03-24T22:00:47.494+0000] {subprocess.py:93} INFO -   <dbReference type="GO" id="GO:0009653">
+[2023-03-24T22:00:47.495+0000] {subprocess.py:93} INFO -     <property type="term" value="P:anatomical structure morphogenesis"/>
+[2023-03-24T22:00:47.495+0000] {subprocess.py:93} INFO -     <property type="evidence" value="ECO:0000318"/>
+[2023-03-24T22:00:47.495+0000] {subprocess.py:93} INFO -     <property type="project" value="GO_Central"/>
+[2023-03-24T22:00:47.495+0000] {subprocess.py:93} INFO -   </dbReference>
+[2023-03-24T22:00:47.495+0000] {subprocess.py:93} INFO -   <dbReference type="GO" id="GO:0030154">
+[2023-03-24T22:00:47.495+0000] {subprocess.py:93} INFO -     <property type="term" value="P:cell differentiation"/>
+[2023-03-24T22:00:47.495+0000] {subprocess.py:93} INFO -     <property type="evidence" value="ECO:0000318"/>
+[2023-03-24T22:00:47.495+0000] {subprocess.py:93} INFO -     <property type="project" value="GO_Central"/>
+[2023-03-24T22:00:47.495+0000] {subprocess.py:93} INFO -   </dbReference>
+[2023-03-24T22:00:47.495+0000] {subprocess.py:93} INFO -   <dbReference type="GO" id="GO:0001708">
+[2023-03-24T22:00:47.495+0000] {subprocess.py:93} INFO -     <property type="term" value="P:cell fate specification"/>
+[2023-03-24T22:00:47.495+0000] {subprocess.py:93} INFO -     <property type="evidence" value="ECO:0000250"/>
+[2023-03-24T22:00:47.495+0000] {subprocess.py:93} INFO -     <property type="project" value="ParkinsonsUK-UCL"/>
+[2023-03-24T22:00:47.496+0000] {subprocess.py:93} INFO -   </dbReference>
+[2023-03-24T22:00:47.496+0000] {subprocess.py:93} INFO -   <dbReference type="GO" id="GO:0006325">
+[2023-03-24T22:00:47.496+0000] {subprocess.py:93} INFO -     <property type="term" value="P:chromatin organization"/>
+[2023-03-24T22:00:47.496+0000] {subprocess.py:93} INFO -     <property type="evidence" value="ECO:0007669"/>
+[2023-03-24T22:00:47.496+0000] {subprocess.py:93} INFO -     <property type="project" value="UniProtKB-KW"/>
+[2023-03-24T22:00:47.496+0000] {subprocess.py:93} INFO -   </dbReference>
+[2023-03-24T22:00:47.496+0000] {subprocess.py:93} INFO -   <dbReference type="GO" id="GO:0071542">
+[2023-03-24T22:00:47.496+0000] {subprocess.py:93} INFO -     <property type="term" value="P:dopaminergic neuron differentiation"/>
+[2023-03-24T22:00:47.496+0000] {subprocess.py:93} INFO -     <property type="evidence" value="ECO:0000316"/>
+[2023-03-24T22:00:47.496+0000] {subprocess.py:93} INFO -     <property type="project" value="ParkinsonsUK-UCL"/>
+[2023-03-24T22:00:47.496+0000] {subprocess.py:93} INFO -   </dbReference>
+[2023-03-24T22:00:47.496+0000] {subprocess.py:93} INFO -   <dbReference type="GO" id="GO:0031018">
+[2023-03-24T22:00:47.496+0000] {subprocess.py:93} INFO -     <property type="term" value="P:endocrine pancreas development"/>
+[2023-03-24T22:00:47.497+0000] {subprocess.py:93} INFO -     <property type="evidence" value="ECO:0000314"/>
+[2023-03-24T22:00:47.497+0000] {subprocess.py:93} INFO -     <property type="project" value="BHF-UCL"/>
+[2023-03-24T22:00:47.497+0000] {subprocess.py:93} INFO -   </dbReference>
+[2023-03-24T22:00:47.497+0000] {subprocess.py:93} INFO -   <dbReference type="GO" id="GO:2000971">
+[2023-03-24T22:00:47.497+0000] {subprocess.py:93} INFO -     <property type="term" value="P:negative regulation of detection of glucose"/>
+[2023-03-24T22:00:47.497+0000] {subprocess.py:93} INFO -     <property type="evidence" value="ECO:0000250"/>
+[2023-03-24T22:00:47.497+0000] {subprocess.py:93} INFO -     <property type="project" value="BHF-UCL"/>
+[2023-03-24T22:00:47.497+0000] {subprocess.py:93} INFO -   </dbReference>
+[2023-03-24T22:00:47.497+0000] {subprocess.py:93} INFO -   <dbReference type="GO" id="GO:0043433">
+[2023-03-24T22:00:47.497+0000] {subprocess.py:93} INFO -     <property type="term" value="P:negative regulation of DNA-binding transcription factor activity"/>
+[2023-03-24T22:00:47.497+0000] {subprocess.py:93} INFO -     <property type="evidence" value="ECO:0000315"/>
+[2023-03-24T22:00:47.497+0000] {subprocess.py:93} INFO -     <property type="project" value="BHF-UCL"/>
+[2023-03-24T22:00:47.498+0000] {subprocess.py:93} INFO -   </dbReference>
+[2023-03-24T22:00:47.498+0000] {subprocess.py:93} INFO -   <dbReference type="GO" id="GO:0010719">
+[2023-03-24T22:00:47.498+0000] {subprocess.py:93} INFO -     <property type="term" value="P:negative regulation of epithelial to mesenchymal transition"/>
+[2023-03-24T22:00:47.498+0000] {subprocess.py:93} INFO -     <property type="evidence" value="ECO:0000315"/>
+[2023-03-24T22:00:47.498+0000] {subprocess.py:93} INFO -     <property type="project" value="BHF-UCL"/>
+[2023-03-24T22:00:47.498+0000] {subprocess.py:93} INFO -   </dbReference>
+[2023-03-24T22:00:47.498+0000] {subprocess.py:93} INFO -   <dbReference type="GO" id="GO:0033132">
+[2023-03-24T22:00:47.498+0000] {subprocess.py:93} INFO -     <property type="term" value="P:negative regulation of glucokinase activity"/>
+[2023-03-24T22:00:47.498+0000] {subprocess.py:93} INFO -     <property type="evidence" value="ECO:0000250"/>
+[2023-03-24T22:00:47.498+0000] {subprocess.py:93} INFO -     <property type="project" value="BHF-UCL"/>
+[2023-03-24T22:00:47.498+0000] {subprocess.py:93} INFO -   </dbReference>
+[2023-03-24T22:00:47.498+0000] {subprocess.py:93} INFO -   <dbReference type="GO" id="GO:0061987">
+[2023-03-24T22:00:47.499+0000] {subprocess.py:93} INFO -     <property type="term" value="P:negative regulation of transcription from RNA polymerase II promoter by glucose"/>
+[2023-03-24T22:00:47.499+0000] {subprocess.py:93} INFO -     <property type="evidence" value="ECO:0000250"/>
+[2023-03-24T22:00:47.499+0000] {subprocess.py:93} INFO -     <property type="project" value="BHF-UCL"/>
+[2023-03-24T22:00:47.499+0000] {subprocess.py:93} INFO -   </dbReference>
+[2023-03-24T22:00:47.499+0000] {subprocess.py:93} INFO -   <dbReference type="GO" id="GO:2000049">
+[2023-03-24T22:00:47.499+0000] {subprocess.py:93} INFO -     <property type="term" value="P:positive regulation of cell-cell adhesion mediated by cadherin"/>
+[2023-03-24T22:00:47.499+0000] {subprocess.py:93} INFO -     <property type="evidence" value="ECO:0000305"/>
+[2023-03-24T22:00:47.499+0000] {subprocess.py:93} INFO -     <property type="project" value="BHF-UCL"/>
+[2023-03-24T22:00:47.499+0000] {subprocess.py:93} INFO -   </dbReference>
+[2023-03-24T22:00:47.499+0000] {subprocess.py:93} INFO -   <dbReference type="GO" id="GO:0045893">
+[2023-03-24T22:00:47.499+0000] {subprocess.py:93} INFO -     <property type="term" value="P:positive regulation of DNA-templated transcription"/>
+[2023-03-24T22:00:47.499+0000] {subprocess.py:93} INFO -     <property type="evidence" value="ECO:0000314"/>
+[2023-03-24T22:00:47.499+0000] {subprocess.py:93} INFO -     <property type="project" value="UniProtKB"/>
+[2023-03-24T22:00:47.500+0000] {subprocess.py:93} INFO -   </dbReference>
+[2023-03-24T22:00:47.500+0000] {subprocess.py:93} INFO -   <dbReference type="GO" id="GO:0040019">
+[2023-03-24T22:00:47.500+0000] {subprocess.py:93} INFO -     <property type="term" value="P:positive regulation of embryonic development"/>
+[2023-03-24T22:00:47.500+0000] {subprocess.py:93} INFO -     <property type="evidence" value="ECO:0000250"/>
+[2023-03-24T22:00:47.500+0000] {subprocess.py:93} INFO -     <property type="project" value="UniProtKB"/>
+[2023-03-24T22:00:47.500+0000] {subprocess.py:93} INFO -   </dbReference>
+[2023-03-24T22:00:47.500+0000] {subprocess.py:93} INFO -   <dbReference type="GO" id="GO:2000543">
+[2023-03-24T22:00:47.500+0000] {subprocess.py:93} INFO -     <property type="term" value="P:positive regulation of gastrulation"/>
+[2023-03-24T22:00:47.500+0000] {subprocess.py:93} INFO -     <property type="evidence" value="ECO:0000250"/>
+[2023-03-24T22:00:47.500+0000] {subprocess.py:93} INFO -     <property type="project" value="UniProtKB"/>
+[2023-03-24T22:00:47.500+0000] {subprocess.py:93} INFO -   </dbReference>
+[2023-03-24T22:00:47.500+0000] {subprocess.py:93} INFO -   <dbReference type="GO" id="GO:0045944">
+[2023-03-24T22:00:47.500+0000] {subprocess.py:93} INFO -     <property type="term" value="P:positive regulation of transcription by RNA polymerase II"/>
+[2023-03-24T22:00:47.501+0000] {subprocess.py:93} INFO -     <property type="evidence" value="ECO:0000314"/>
+[2023-03-24T22:00:47.501+0000] {subprocess.py:93} INFO -     <property type="project" value="BHF-UCL"/>
+[2023-03-24T22:00:47.501+0000] {subprocess.py:93} INFO -   </dbReference>
+[2023-03-24T22:00:47.501+0000] {subprocess.py:93} INFO -   <dbReference type="GO" id="GO:0000432">
+[2023-03-24T22:00:47.501+0000] {subprocess.py:93} INFO -     <property type="term" value="P:positive regulation of transcription from RNA polymerase II promoter by glucose"/>
+[2023-03-24T22:00:47.501+0000] {subprocess.py:93} INFO -     <property type="evidence" value="ECO:0000250"/>
+[2023-03-24T22:00:47.501+0000] {subprocess.py:93} INFO -     <property type="project" value="BHF-UCL"/>
+[2023-03-24T22:00:47.501+0000] {subprocess.py:93} INFO -   </dbReference>
+[2023-03-24T22:00:47.501+0000] {subprocess.py:93} INFO -   <dbReference type="GO" id="GO:0090009">
+[2023-03-24T22:00:47.501+0000] {subprocess.py:93} INFO -     <property type="term" value="P:primitive streak formation"/>
+[2023-03-24T22:00:47.502+0000] {subprocess.py:93} INFO -     <property type="evidence" value="ECO:0000250"/>
+[2023-03-24T22:00:47.502+0000] {subprocess.py:93} INFO -     <property type="project" value="UniProtKB"/>
+[2023-03-24T22:00:47.502+0000] {subprocess.py:93} INFO -   </dbReference>
+[2023-03-24T22:00:47.502+0000] {subprocess.py:93} INFO -   <dbReference type="GO" id="GO:0030193">
+[2023-03-24T22:00:47.502+0000] {subprocess.py:93} INFO -     <property type="term" value="P:regulation of blood coagulation"/>
+[2023-03-24T22:00:47.502+0000] {subprocess.py:93} INFO -     <property type="evidence" value="ECO:0000314"/>
+[2023-03-24T22:00:47.502+0000] {subprocess.py:93} INFO -     <property type="project" value="UniProtKB"/>
+[2023-03-24T22:00:47.502+0000] {subprocess.py:93} INFO -   </dbReference>
+[2023-03-24T22:00:47.502+0000] {subprocess.py:93} INFO -   <dbReference type="GO" id="GO:0061178">
+[2023-03-24T22:00:47.502+0000] {subprocess.py:93} INFO -     <property type="term" value="P:regulation of insulin secretion involved in cellular response to glucose stimulus"/>
+[2023-03-24T22:00:47.502+0000] {subprocess.py:93} INFO -     <property type="evidence" value="ECO:0000250"/>
+[2023-03-24T22:00:47.502+0000] {subprocess.py:93} INFO -     <property type="project" value="BHF-UCL"/>
+[2023-03-24T22:00:47.503+0000] {subprocess.py:93} INFO -   </dbReference>
+[2023-03-24T22:00:47.503+0000] {subprocess.py:93} INFO -   <dbReference type="GO" id="GO:0006357">
+[2023-03-24T22:00:47.503+0000] {subprocess.py:93} INFO -     <property type="term" value="P:regulation of transcription by RNA polymerase II"/>
+[2023-03-24T22:00:47.503+0000] {subprocess.py:93} INFO -     <property type="evidence" value="ECO:0000314"/>
+[2023-03-24T22:00:47.503+0000] {subprocess.py:93} INFO -     <property type="project" value="BHF-UCL"/>
+[2023-03-24T22:00:47.503+0000] {subprocess.py:93} INFO -   </dbReference>
+[2023-03-24T22:00:47.503+0000] {subprocess.py:93} INFO -   <dbReference type="GO" id="GO:0070741">
+[2023-03-24T22:00:47.503+0000] {subprocess.py:93} INFO -     <property type="term" value="P:response to interleukin-6"/>
+[2023-03-24T22:00:47.503+0000] {subprocess.py:93} INFO -     <property type="evidence" value="ECO:0000304"/>
+[2023-03-24T22:00:47.503+0000] {subprocess.py:93} INFO -     <property type="project" value="UniProtKB"/>
+[2023-03-24T22:00:47.503+0000] {subprocess.py:93} INFO -   </dbReference>
+[2023-03-24T22:00:47.503+0000] {subprocess.py:93} INFO -   <dbReference type="CDD" id="cd00059">
+[2023-03-24T22:00:47.504+0000] {subprocess.py:93} INFO -     <property type="entry name" value="FH"/>
+[2023-03-24T22:00:47.504+0000] {subprocess.py:93} INFO -     <property type="match status" value="1"/>
+[2023-03-24T22:00:47.504+0000] {subprocess.py:93} INFO -   </dbReference>
+[2023-03-24T22:00:47.504+0000] {subprocess.py:93} INFO -   <dbReference type="DisProt" id="DP01124"/>
+[2023-03-24T22:00:47.504+0000] {subprocess.py:93} INFO -   <dbReference type="Gene3D" id="1.10.10.10">
+[2023-03-24T22:00:47.504+0000] {subprocess.py:93} INFO -     <property type="match status" value="1"/>
+[2023-03-24T22:00:47.504+0000] {subprocess.py:93} INFO -   </dbReference>
+[2023-03-24T22:00:47.504+0000] {subprocess.py:93} INFO -   <dbReference type="InterPro" id="IPR013638">
+[2023-03-24T22:00:47.504+0000] {subprocess.py:93} INFO -     <property type="entry name" value="Fork-head_N"/>
+[2023-03-24T22:00:47.504+0000] {subprocess.py:93} INFO -   </dbReference>
+[2023-03-24T22:00:47.504+0000] {subprocess.py:93} INFO -   <dbReference type="InterPro" id="IPR001766">
+[2023-03-24T22:00:47.504+0000] {subprocess.py:93} INFO -     <property type="entry name" value="Fork_head_dom"/>
+[2023-03-24T22:00:47.505+0000] {subprocess.py:93} INFO -   </dbReference>
+[2023-03-24T22:00:47.505+0000] {subprocess.py:93} INFO -   <dbReference type="InterPro" id="IPR018533">
+[2023-03-24T22:00:47.505+0000] {subprocess.py:93} INFO -     <property type="entry name" value="Forkhead_box_C"/>
+[2023-03-24T22:00:47.505+0000] {subprocess.py:93} INFO -   </dbReference>
+[2023-03-24T22:00:47.505+0000] {subprocess.py:93} INFO -   <dbReference type="InterPro" id="IPR018122">
+[2023-03-24T22:00:47.505+0000] {subprocess.py:93} INFO -     <property type="entry name" value="TF_fork_head_CS_1"/>
+[2023-03-24T22:00:47.505+0000] {subprocess.py:93} INFO -   </dbReference>
+[2023-03-24T22:00:47.505+0000] {subprocess.py:93} INFO -   <dbReference type="InterPro" id="IPR030456">
+[2023-03-24T22:00:47.505+0000] {subprocess.py:93} INFO -     <property type="entry name" value="TF_fork_head_CS_2"/>
+[2023-03-24T22:00:47.505+0000] {subprocess.py:93} INFO -   </dbReference>
+[2023-03-24T22:00:47.506+0000] {subprocess.py:93} INFO -   <dbReference type="InterPro" id="IPR036388">
+[2023-03-24T22:00:47.506+0000] {subprocess.py:93} INFO -     <property type="entry name" value="WH-like_DNA-bd_sf"/>
+[2023-03-24T22:00:47.506+0000] {subprocess.py:93} INFO -   </dbReference>
+[2023-03-24T22:00:47.506+0000] {subprocess.py:93} INFO -   <dbReference type="InterPro" id="IPR036390">
+[2023-03-24T22:00:47.506+0000] {subprocess.py:93} INFO -     <property type="entry name" value="WH_DNA-bd_sf"/>
+[2023-03-24T22:00:47.506+0000] {subprocess.py:93} INFO -   </dbReference>
+[2023-03-24T22:00:47.506+0000] {subprocess.py:93} INFO -   <dbReference type="Pfam" id="PF00250">
+[2023-03-24T22:00:47.506+0000] {subprocess.py:93} INFO -     <property type="entry name" value="Forkhead"/>
+[2023-03-24T22:00:47.506+0000] {subprocess.py:93} INFO -     <property type="match status" value="1"/>
+[2023-03-24T22:00:47.507+0000] {subprocess.py:93} INFO -   </dbReference>
+[2023-03-24T22:00:47.507+0000] {subprocess.py:93} INFO -   <dbReference type="Pfam" id="PF08430">
+[2023-03-24T22:00:47.507+0000] {subprocess.py:93} INFO -     <property type="entry name" value="Forkhead_N"/>
+[2023-03-24T22:00:47.507+0000] {subprocess.py:93} INFO -     <property type="match status" value="1"/>
+[2023-03-24T22:00:47.507+0000] {subprocess.py:93} INFO -   </dbReference>
+[2023-03-24T22:00:47.507+0000] {subprocess.py:93} INFO -   <dbReference type="Pfam" id="PF09354">
+[2023-03-24T22:00:47.507+0000] {subprocess.py:93} INFO -     <property type="entry name" value="HNF_C"/>
+[2023-03-24T22:00:47.507+0000] {subprocess.py:93} INFO -     <property type="match status" value="1"/>
+[2023-03-24T22:00:47.507+0000] {subprocess.py:93} INFO -   </dbReference>
+[2023-03-24T22:00:47.507+0000] {subprocess.py:93} INFO -   <dbReference type="PRINTS" id="PR00053">
+[2023-03-24T22:00:47.507+0000] {subprocess.py:93} INFO -     <property type="entry name" value="FORKHEAD"/>
+[2023-03-24T22:00:47.507+0000] {subprocess.py:93} INFO -   </dbReference>
+[2023-03-24T22:00:47.507+0000] {subprocess.py:93} INFO -   <dbReference type="SMART" id="SM00339">
+[2023-03-24T22:00:47.508+0000] {subprocess.py:93} INFO -     <property type="entry name" value="FH"/>
+[2023-03-24T22:00:47.508+0000] {subprocess.py:93} INFO -     <property type="match status" value="1"/>
+[2023-03-24T22:00:47.508+0000] {subprocess.py:93} INFO -   </dbReference>
+[2023-03-24T22:00:47.508+0000] {subprocess.py:93} INFO -   <dbReference type="SUPFAM" id="SSF46785">
+[2023-03-24T22:00:47.508+0000] {subprocess.py:93} INFO -     <property type="entry name" value="Winged helix DNA-binding domain"/>
+[2023-03-24T22:00:47.508+0000] {subprocess.py:93} INFO -     <property type="match status" value="1"/>
+[2023-03-24T22:00:47.508+0000] {subprocess.py:93} INFO -   </dbReference>
+[2023-03-24T22:00:47.508+0000] {subprocess.py:93} INFO -   <dbReference type="PROSITE" id="PS00657">
+[2023-03-24T22:00:47.508+0000] {subprocess.py:93} INFO -     <property type="entry name" value="FORK_HEAD_1"/>
+[2023-03-24T22:00:47.508+0000] {subprocess.py:93} INFO -     <property type="match status" value="1"/>
+[2023-03-24T22:00:47.508+0000] {subprocess.py:93} INFO -   </dbReference>
+[2023-03-24T22:00:47.508+0000] {subprocess.py:93} INFO -   <dbReference type="PROSITE" id="PS00658">
+[2023-03-24T22:00:47.508+0000] {subprocess.py:93} INFO -     <property type="entry name" value="FORK_HEAD_2"/>
+[2023-03-24T22:00:47.509+0000] {subprocess.py:93} INFO -     <property type="match status" value="1"/>
+[2023-03-24T22:00:47.509+0000] {subprocess.py:93} INFO -   </dbReference>
+[2023-03-24T22:00:47.509+0000] {subprocess.py:93} INFO -   <dbReference type="PROSITE" id="PS50039">
+[2023-03-24T22:00:47.509+0000] {subprocess.py:93} INFO -     <property type="entry name" value="FORK_HEAD_3"/>
+[2023-03-24T22:00:47.509+0000] {subprocess.py:93} INFO -     <property type="match status" value="1"/>
+[2023-03-24T22:00:47.509+0000] {subprocess.py:93} INFO -   </dbReference>
+[2023-03-24T22:00:47.509+0000] {subprocess.py:93} INFO -   <proteinExistence type="evidence at protein level"/>
+[2023-03-24T22:00:47.509+0000] {subprocess.py:93} INFO -   <keyword id="KW-0002">3D-structure</keyword>
+[2023-03-24T22:00:47.509+0000] {subprocess.py:93} INFO -   <keyword id="KW-0010">Activator</keyword>
+[2023-03-24T22:00:47.509+0000] {subprocess.py:93} INFO -   <keyword id="KW-0025">Alternative splicing</keyword>
+[2023-03-24T22:00:47.509+0000] {subprocess.py:93} INFO -   <keyword id="KW-0156">Chromatin regulator</keyword>
+[2023-03-24T22:00:47.509+0000] {subprocess.py:93} INFO -   <keyword id="KW-0963">Cytoplasm</keyword>
+[2023-03-24T22:00:47.510+0000] {subprocess.py:93} INFO -   <keyword id="KW-0217">Developmental protein</keyword>
+[2023-03-24T22:00:47.510+0000] {subprocess.py:93} INFO -   <keyword id="KW-0238">DNA-binding</keyword>
+[2023-03-24T22:00:47.510+0000] {subprocess.py:93} INFO -   <keyword id="KW-0539">Nucleus</keyword>
+[2023-03-24T22:00:47.510+0000] {subprocess.py:93} INFO -   <keyword id="KW-0597">Phosphoprotein</keyword>
+[2023-03-24T22:00:47.510+0000] {subprocess.py:93} INFO -   <keyword id="KW-1185">Reference proteome</keyword>
+[2023-03-24T22:00:47.510+0000] {subprocess.py:93} INFO -   <keyword id="KW-0804">Transcription</keyword>
+[2023-03-24T22:00:47.510+0000] {subprocess.py:93} INFO -   <keyword id="KW-0805">Transcription regulation</keyword>
+[2023-03-24T22:00:47.510+0000] {subprocess.py:93} INFO -   <feature type="chain" id="PRO_0000091795" description="Hepatocyte nuclear factor 3-beta">
+[2023-03-24T22:00:47.510+0000] {subprocess.py:93} INFO -     <location>
+[2023-03-24T22:00:47.510+0000] {subprocess.py:93} INFO -       <begin position="1"/>
+[2023-03-24T22:00:47.511+0000] {subprocess.py:93} INFO -       <end position="457"/>
+[2023-03-24T22:00:47.511+0000] {subprocess.py:93} INFO -     </location>
+[2023-03-24T22:00:47.511+0000] {subprocess.py:93} INFO -   </feature>
+[2023-03-24T22:00:47.511+0000] {subprocess.py:93} INFO -   <feature type="DNA-binding region" description="Fork-head" evidence="4">
+[2023-03-24T22:00:47.511+0000] {subprocess.py:93} INFO -     <location>
+[2023-03-24T22:00:47.511+0000] {subprocess.py:93} INFO -       <begin position="159"/>
+[2023-03-24T22:00:47.511+0000] {subprocess.py:93} INFO -       <end position="252"/>
+[2023-03-24T22:00:47.511+0000] {subprocess.py:93} INFO -     </location>
+[2023-03-24T22:00:47.511+0000] {subprocess.py:93} INFO -   </feature>
+[2023-03-24T22:00:47.511+0000] {subprocess.py:93} INFO -   <feature type="region of interest" description="Transactivation domain 1" evidence="1">
+[2023-03-24T22:00:47.511+0000] {subprocess.py:93} INFO -     <location>
+[2023-03-24T22:00:47.511+0000] {subprocess.py:93} INFO -       <begin position="14"/>
+[2023-03-24T22:00:47.512+0000] {subprocess.py:93} INFO -       <end position="93"/>
+[2023-03-24T22:00:47.512+0000] {subprocess.py:93} INFO -     </location>
+[2023-03-24T22:00:47.512+0000] {subprocess.py:93} INFO -   </feature>
+[2023-03-24T22:00:47.512+0000] {subprocess.py:93} INFO -   <feature type="region of interest" description="Disordered" evidence="5">
+[2023-03-24T22:00:47.512+0000] {subprocess.py:93} INFO -     <location>
+[2023-03-24T22:00:47.512+0000] {subprocess.py:93} INFO -       <begin position="280"/>
+[2023-03-24T22:00:47.512+0000] {subprocess.py:93} INFO -       <end position="365"/>
+[2023-03-24T22:00:47.512+0000] {subprocess.py:93} INFO -     </location>
+[2023-03-24T22:00:47.512+0000] {subprocess.py:93} INFO -   </feature>
+[2023-03-24T22:00:47.512+0000] {subprocess.py:93} INFO -   <feature type="region of interest" description="Transactivation domain 2" evidence="1">
+[2023-03-24T22:00:47.512+0000] {subprocess.py:93} INFO -     <location>
+[2023-03-24T22:00:47.512+0000] {subprocess.py:93} INFO -       <begin position="361"/>
+[2023-03-24T22:00:47.512+0000] {subprocess.py:93} INFO -       <end position="457"/>
+[2023-03-24T22:00:47.513+0000] {subprocess.py:93} INFO -     </location>
+[2023-03-24T22:00:47.513+0000] {subprocess.py:93} INFO -   </feature>
+[2023-03-24T22:00:47.513+0000] {subprocess.py:93} INFO -   <feature type="short sequence motif" description="Nuclear localization signal" evidence="1">
+[2023-03-24T22:00:47.513+0000] {subprocess.py:93} INFO -     <location>
+[2023-03-24T22:00:47.513+0000] {subprocess.py:93} INFO -       <begin position="106"/>
+[2023-03-24T22:00:47.513+0000] {subprocess.py:93} INFO -       <end position="113"/>
+[2023-03-24T22:00:47.513+0000] {subprocess.py:93} INFO -     </location>
+[2023-03-24T22:00:47.513+0000] {subprocess.py:93} INFO -   </feature>
+[2023-03-24T22:00:47.513+0000] {subprocess.py:93} INFO -   <feature type="modified residue" description="Phosphothreonine" evidence="2">
+[2023-03-24T22:00:47.513+0000] {subprocess.py:93} INFO -     <location>
+[2023-03-24T22:00:47.513+0000] {subprocess.py:93} INFO -       <position position="156"/>
+[2023-03-24T22:00:47.513+0000] {subprocess.py:93} INFO -     </location>
+[2023-03-24T22:00:47.514+0000] {subprocess.py:93} INFO -   </feature>
+[2023-03-24T22:00:47.514+0000] {subprocess.py:93} INFO -   <feature type="modified residue" description="Phosphoserine" evidence="2">
+[2023-03-24T22:00:47.514+0000] {subprocess.py:93} INFO -     <location>
+[2023-03-24T22:00:47.514+0000] {subprocess.py:93} INFO -       <position position="212"/>
+[2023-03-24T22:00:47.514+0000] {subprocess.py:93} INFO -     </location>
+[2023-03-24T22:00:47.514+0000] {subprocess.py:93} INFO -   </feature>
+[2023-03-24T22:00:47.514+0000] {subprocess.py:93} INFO -   <feature type="modified residue" description="Phosphoserine" evidence="2">
+[2023-03-24T22:00:47.514+0000] {subprocess.py:93} INFO -     <location>
+[2023-03-24T22:00:47.514+0000] {subprocess.py:93} INFO -       <position position="283"/>
+[2023-03-24T22:00:47.514+0000] {subprocess.py:93} INFO -     </location>
+[2023-03-24T22:00:47.514+0000] {subprocess.py:93} INFO -   </feature>
+[2023-03-24T22:00:47.515+0000] {subprocess.py:93} INFO -   <feature type="modified residue" description="Phosphothreonine" evidence="3">
+[2023-03-24T22:00:47.515+0000] {subprocess.py:93} INFO -     <location>
+[2023-03-24T22:00:47.515+0000] {subprocess.py:93} INFO -       <position position="301"/>
+[2023-03-24T22:00:47.515+0000] {subprocess.py:93} INFO -     </location>
+[2023-03-24T22:00:47.515+0000] {subprocess.py:93} INFO -   </feature>
+[2023-03-24T22:00:47.515+0000] {subprocess.py:93} INFO -   <feature type="modified residue" description="Phosphoserine" evidence="12">
+[2023-03-24T22:00:47.515+0000] {subprocess.py:93} INFO -     <location>
+[2023-03-24T22:00:47.515+0000] {subprocess.py:93} INFO -       <position position="303"/>
+[2023-03-24T22:00:47.515+0000] {subprocess.py:93} INFO -     </location>
+[2023-03-24T22:00:47.515+0000] {subprocess.py:93} INFO -   </feature>
+[2023-03-24T22:00:47.515+0000] {subprocess.py:93} INFO -   <feature type="modified residue" description="Phosphoserine" evidence="2">
+[2023-03-24T22:00:47.515+0000] {subprocess.py:93} INFO -     <location>
+[2023-03-24T22:00:47.516+0000] {subprocess.py:93} INFO -       <position position="306"/>
+[2023-03-24T22:00:47.516+0000] {subprocess.py:93} INFO -     </location>
+[2023-03-24T22:00:47.516+0000] {subprocess.py:93} INFO -   </feature>
+[2023-03-24T22:00:47.516+0000] {subprocess.py:93} INFO -   <feature type="modified residue" description="Phosphoserine" evidence="2">
+[2023-03-24T22:00:47.516+0000] {subprocess.py:93} INFO -     <location>
+[2023-03-24T22:00:47.516+0000] {subprocess.py:93} INFO -       <position position="307"/>
+[2023-03-24T22:00:47.516+0000] {subprocess.py:93} INFO -     </location>
+[2023-03-24T22:00:47.516+0000] {subprocess.py:93} INFO -   </feature>
+[2023-03-24T22:00:47.516+0000] {subprocess.py:93} INFO -   <feature type="modified residue" description="Phosphoserine" evidence="12">
+[2023-03-24T22:00:47.516+0000] {subprocess.py:93} INFO -     <location>
+[2023-03-24T22:00:47.516+0000] {subprocess.py:93} INFO -       <position position="309"/>
+[2023-03-24T22:00:47.516+0000] {subprocess.py:93} INFO -     </location>
+[2023-03-24T22:00:47.516+0000] {subprocess.py:93} INFO -   </feature>
+[2023-03-24T22:00:47.517+0000] {subprocess.py:93} INFO -   <feature type="modified residue" description="Phosphoserine" evidence="2">
+[2023-03-24T22:00:47.517+0000] {subprocess.py:93} INFO -     <location>
+[2023-03-24T22:00:47.517+0000] {subprocess.py:93} INFO -       <position position="436"/>
+[2023-03-24T22:00:47.517+0000] {subprocess.py:93} INFO -     </location>
+[2023-03-24T22:00:47.517+0000] {subprocess.py:93} INFO -   </feature>
+[2023-03-24T22:00:47.517+0000] {subprocess.py:93} INFO -   <feature type="modified residue" description="Phosphoserine" evidence="2">
+[2023-03-24T22:00:47.517+0000] {subprocess.py:93} INFO -     <location>
+[2023-03-24T22:00:47.517+0000] {subprocess.py:93} INFO -       <position position="457"/>
+[2023-03-24T22:00:47.517+0000] {subprocess.py:93} INFO -     </location>
+[2023-03-24T22:00:47.518+0000] {subprocess.py:93} INFO -   </feature>
+[2023-03-24T22:00:47.518+0000] {subprocess.py:93} INFO -   <feature type="splice variant" id="VSP_041212" description="In isoform 2." evidence="10">
+[2023-03-24T22:00:47.518+0000] {subprocess.py:93} INFO -     <original>M</original>
+[2023-03-24T22:00:47.518+0000] {subprocess.py:93} INFO -     <variation>MHSASSM</variation>
+[2023-03-24T22:00:47.518+0000] {subprocess.py:93} INFO -     <location>
+[2023-03-24T22:00:47.518+0000] {subprocess.py:93} INFO -       <position position="1"/>
+[2023-03-24T22:00:47.518+0000] {subprocess.py:93} INFO -     </location>
+[2023-03-24T22:00:47.518+0000] {subprocess.py:93} INFO -   </feature>
+[2023-03-24T22:00:47.518+0000] {subprocess.py:93} INFO -   <feature type="sequence variant" id="VAR_008858" description="In Japanese subjects with maturity-onset diabetes of the young; unknown pathological significance; dbSNP:rs199796119." evidence="6">
+[2023-03-24T22:00:47.518+0000] {subprocess.py:93} INFO -     <original>A</original>
+[2023-03-24T22:00:47.519+0000] {subprocess.py:93} INFO -     <variation>V</variation>
+[2023-03-24T22:00:47.519+0000] {subprocess.py:93} INFO -     <location>
+[2023-03-24T22:00:47.519+0000] {subprocess.py:93} INFO -       <position position="328"/>
+[2023-03-24T22:00:47.519+0000] {subprocess.py:93} INFO -     </location>
+[2023-03-24T22:00:47.519+0000] {subprocess.py:93} INFO -   </feature>
+[2023-03-24T22:00:47.519+0000] {subprocess.py:93} INFO -   <feature type="helix" evidence="13">
+[2023-03-24T22:00:47.519+0000] {subprocess.py:93} INFO -     <location>
+[2023-03-24T22:00:47.519+0000] {subprocess.py:93} INFO -       <begin position="164"/>
+[2023-03-24T22:00:47.519+0000] {subprocess.py:93} INFO -       <end position="173"/>
+[2023-03-24T22:00:47.519+0000] {subprocess.py:93} INFO -     </location>
+[2023-03-24T22:00:47.519+0000] {subprocess.py:93} INFO -   </feature>
+[2023-03-24T22:00:47.519+0000] {subprocess.py:93} INFO -   <feature type="strand" evidence="13">
+[2023-03-24T22:00:47.520+0000] {subprocess.py:93} INFO -     <location>
+[2023-03-24T22:00:47.520+0000] {subprocess.py:93} INFO -       <begin position="178"/>
+[2023-03-24T22:00:47.520+0000] {subprocess.py:93} INFO -       <end position="180"/>
+[2023-03-24T22:00:47.520+0000] {subprocess.py:93} INFO -     </location>
+[2023-03-24T22:00:47.520+0000] {subprocess.py:93} INFO -   </feature>
+[2023-03-24T22:00:47.520+0000] {subprocess.py:93} INFO -   <feature type="helix" evidence="13">
+[2023-03-24T22:00:47.520+0000] {subprocess.py:93} INFO -     <location>
+[2023-03-24T22:00:47.520+0000] {subprocess.py:93} INFO -       <begin position="182"/>
+[2023-03-24T22:00:47.520+0000] {subprocess.py:93} INFO -       <end position="192"/>
+[2023-03-24T22:00:47.520+0000] {subprocess.py:93} INFO -     </location>
+[2023-03-24T22:00:47.520+0000] {subprocess.py:93} INFO -   </feature>
+[2023-03-24T22:00:47.521+0000] {subprocess.py:93} INFO -   <feature type="helix" evidence="13">
+[2023-03-24T22:00:47.521+0000] {subprocess.py:93} INFO -     <location>
+[2023-03-24T22:00:47.521+0000] {subprocess.py:93} INFO -       <begin position="194"/>
+[2023-03-24T22:00:47.521+0000] {subprocess.py:93} INFO -       <end position="197"/>
+[2023-03-24T22:00:47.521+0000] {subprocess.py:93} INFO -     </location>
+[2023-03-24T22:00:47.521+0000] {subprocess.py:93} INFO -   </feature>
+[2023-03-24T22:00:47.521+0000] {subprocess.py:93} INFO -   <feature type="helix" evidence="13">
+[2023-03-24T22:00:47.521+0000] {subprocess.py:93} INFO -     <location>
+[2023-03-24T22:00:47.521+0000] {subprocess.py:93} INFO -       <begin position="200"/>
+[2023-03-24T22:00:47.521+0000] {subprocess.py:93} INFO -       <end position="213"/>
+[2023-03-24T22:00:47.522+0000] {subprocess.py:93} INFO -     </location>
+[2023-03-24T22:00:47.522+0000] {subprocess.py:93} INFO -   </feature>
+[2023-03-24T22:00:47.522+0000] {subprocess.py:93} INFO -   <feature type="strand" evidence="13">
+[2023-03-24T22:00:47.522+0000] {subprocess.py:93} INFO -     <location>
+[2023-03-24T22:00:47.522+0000] {subprocess.py:93} INFO -       <begin position="217"/>
+[2023-03-24T22:00:47.522+0000] {subprocess.py:93} INFO -       <end position="220"/>
+[2023-03-24T22:00:47.522+0000] {subprocess.py:93} INFO -     </location>
+[2023-03-24T22:00:47.523+0000] {subprocess.py:93} INFO -   </feature>
+[2023-03-24T22:00:47.523+0000] {subprocess.py:93} INFO -   <feature type="strand" evidence="13">
+[2023-03-24T22:00:47.523+0000] {subprocess.py:93} INFO -     <location>
+[2023-03-24T22:00:47.523+0000] {subprocess.py:93} INFO -       <begin position="224"/>
+[2023-03-24T22:00:47.523+0000] {subprocess.py:93} INFO -       <end position="226"/>
+[2023-03-24T22:00:47.523+0000] {subprocess.py:93} INFO -     </location>
+[2023-03-24T22:00:47.524+0000] {subprocess.py:93} INFO -   </feature>
+[2023-03-24T22:00:47.524+0000] {subprocess.py:93} INFO -   <feature type="strand" evidence="13">
+[2023-03-24T22:00:47.524+0000] {subprocess.py:93} INFO -     <location>
+[2023-03-24T22:00:47.524+0000] {subprocess.py:93} INFO -       <begin position="232"/>
+[2023-03-24T22:00:47.524+0000] {subprocess.py:93} INFO -       <end position="235"/>
+[2023-03-24T22:00:47.524+0000] {subprocess.py:93} INFO -     </location>
+[2023-03-24T22:00:47.524+0000] {subprocess.py:93} INFO -   </feature>
+[2023-03-24T22:00:47.524+0000] {subprocess.py:93} INFO -   <evidence type="ECO:0000250" key="1"/>
+[2023-03-24T22:00:47.524+0000] {subprocess.py:93} INFO -   <evidence type="ECO:0000250" key="2">
+[2023-03-24T22:00:47.524+0000] {subprocess.py:93} INFO -     <source>
+[2023-03-24T22:00:47.524+0000] {subprocess.py:93} INFO -       <dbReference type="UniProtKB" id="P32182"/>
+[2023-03-24T22:00:47.525+0000] {subprocess.py:93} INFO -     </source>
+[2023-03-24T22:00:47.525+0000] {subprocess.py:93} INFO -   </evidence>
+[2023-03-24T22:00:47.525+0000] {subprocess.py:93} INFO -   <evidence type="ECO:0000250" key="3">
+[2023-03-24T22:00:47.525+0000] {subprocess.py:93} INFO -     <source>
+[2023-03-24T22:00:47.525+0000] {subprocess.py:93} INFO -       <dbReference type="UniProtKB" id="P35583"/>
+[2023-03-24T22:00:47.525+0000] {subprocess.py:93} INFO -     </source>
+[2023-03-24T22:00:47.525+0000] {subprocess.py:93} INFO -   </evidence>
+[2023-03-24T22:00:47.525+0000] {subprocess.py:93} INFO -   <evidence type="ECO:0000255" key="4">
+[2023-03-24T22:00:47.525+0000] {subprocess.py:93} INFO -     <source>
+[2023-03-24T22:00:47.525+0000] {subprocess.py:93} INFO -       <dbReference type="PROSITE-ProRule" id="PRU00089"/>
+[2023-03-24T22:00:47.525+0000] {subprocess.py:93} INFO -     </source>
+[2023-03-24T22:00:47.525+0000] {subprocess.py:93} INFO -   </evidence>
+[2023-03-24T22:00:47.525+0000] {subprocess.py:93} INFO -   <evidence type="ECO:0000256" key="5">
+[2023-03-24T22:00:47.526+0000] {subprocess.py:93} INFO -     <source>
+[2023-03-24T22:00:47.526+0000] {subprocess.py:93} INFO -       <dbReference type="SAM" id="MobiDB-lite"/>
+[2023-03-24T22:00:47.526+0000] {subprocess.py:93} INFO -     </source>
+[2023-03-24T22:00:47.526+0000] {subprocess.py:93} INFO -   </evidence>
+[2023-03-24T22:00:47.526+0000] {subprocess.py:93} INFO -   <evidence type="ECO:0000269" key="6">
+[2023-03-24T22:00:47.526+0000] {subprocess.py:93} INFO -     <source>
+[2023-03-24T22:00:47.526+0000] {subprocess.py:93} INFO -       <dbReference type="PubMed" id="10672453"/>
+[2023-03-24T22:00:47.526+0000] {subprocess.py:93} INFO -     </source>
+[2023-03-24T22:00:47.526+0000] {subprocess.py:93} INFO -   </evidence>
+[2023-03-24T22:00:47.526+0000] {subprocess.py:93} INFO -   <evidence type="ECO:0000269" key="7">
+[2023-03-24T22:00:47.526+0000] {subprocess.py:93} INFO -     <source>
+[2023-03-24T22:00:47.526+0000] {subprocess.py:93} INFO -       <dbReference type="PubMed" id="14500912"/>
+[2023-03-24T22:00:47.527+0000] {subprocess.py:93} INFO -     </source>
+[2023-03-24T22:00:47.527+0000] {subprocess.py:93} INFO -   </evidence>
+[2023-03-24T22:00:47.527+0000] {subprocess.py:93} INFO -   <evidence type="ECO:0000269" key="8">
+[2023-03-24T22:00:47.527+0000] {subprocess.py:93} INFO -     <source>
+[2023-03-24T22:00:47.527+0000] {subprocess.py:93} INFO -       <dbReference type="PubMed" id="19478084"/>
+[2023-03-24T22:00:47.527+0000] {subprocess.py:93} INFO -     </source>
+[2023-03-24T22:00:47.527+0000] {subprocess.py:93} INFO -   </evidence>
+[2023-03-24T22:00:47.527+0000] {subprocess.py:93} INFO -   <evidence type="ECO:0000269" key="9">
+[2023-03-24T22:00:47.527+0000] {subprocess.py:93} INFO -     <source>
+[2023-03-24T22:00:47.527+0000] {subprocess.py:93} INFO -       <dbReference type="PubMed" id="19919681"/>
+[2023-03-24T22:00:47.527+0000] {subprocess.py:93} INFO -     </source>
+[2023-03-24T22:00:47.527+0000] {subprocess.py:93} INFO -   </evidence>
+[2023-03-24T22:00:47.527+0000] {subprocess.py:93} INFO -   <evidence type="ECO:0000303" key="10">
+[2023-03-24T22:00:47.528+0000] {subprocess.py:93} INFO -     <source>
+[2023-03-24T22:00:47.528+0000] {subprocess.py:93} INFO -       <dbReference type="PubMed" id="15489334"/>
+[2023-03-24T22:00:47.528+0000] {subprocess.py:93} INFO -     </source>
+[2023-03-24T22:00:47.528+0000] {subprocess.py:93} INFO -   </evidence>
+[2023-03-24T22:00:47.528+0000] {subprocess.py:93} INFO -   <evidence type="ECO:0000305" key="11"/>
+[2023-03-24T22:00:47.528+0000] {subprocess.py:93} INFO -   <evidence type="ECO:0007744" key="12">
+[2023-03-24T22:00:47.528+0000] {subprocess.py:93} INFO -     <source>
+[2023-03-24T22:00:47.528+0000] {subprocess.py:93} INFO -       <dbReference type="PubMed" id="24275569"/>
+[2023-03-24T22:00:47.528+0000] {subprocess.py:93} INFO -     </source>
+[2023-03-24T22:00:47.528+0000] {subprocess.py:93} INFO -   </evidence>
+[2023-03-24T22:00:47.528+0000] {subprocess.py:93} INFO -   <evidence type="ECO:0007829" key="13">
+[2023-03-24T22:00:47.528+0000] {subprocess.py:93} INFO -     <source>
+[2023-03-24T22:00:47.528+0000] {subprocess.py:93} INFO -       <dbReference type="PDB" id="5X07"/>
+[2023-03-24T22:00:47.529+0000] {subprocess.py:93} INFO -     </source>
+[2023-03-24T22:00:47.529+0000] {subprocess.py:93} INFO -   </evidence>
+[2023-03-24T22:00:47.529+0000] {subprocess.py:93} INFO -   <sequence length="457" mass="48306" checksum="61DDE4C75C70680A" modified="1999-11-01" version="1">MLGAVKMEGHEPSDWSSYYAEPEGYSSVSNMNAGLGMNGMNTYMSMSAAAMGSGSGNMSAGSMNMSSYVGAGMSPSLAGMSPGAGAMAGMGGSAGAAGVAGMGPHLSPSLSPLGGQAAGAMGGLAPYANMNSMSPMYGQAGLSRARDPKTYRRSYTHAKPPYSYISLITMAIQQSPNKMLTLSEIYQWIMDLFPFYRQNQQRWQNSIRHSLSFNDCFLKVPRSPDKPGKGSFWTLHPDSGNMFENGCYLRRQKRFKCEKQLALKEAAGAAGSGKKAAAGAQASQAQLGEAAGPASETPAGTESPHSSASPCQEHKRGGLGELKGTPAAALSPPEPAPSPGQQQQAAAHLLGPPHHPGLPPEAHLKPEHHYAFNHPFSINNLMSSEQQHHHSHHHHQPHKMDLKAYEQVMHYPGYGSPMPGSLAMGPVTNKTGLDASPLAADTSYYQGVYSRPIMNSS</sequence>
+[2023-03-24T22:00:47.529+0000] {subprocess.py:93} INFO - </entry>
+[2023-03-24T22:00:47.529+0000] {subprocess.py:93} INFO - <copyright>
+[2023-03-24T22:00:47.529+0000] {subprocess.py:93} INFO - Copyrighted by the UniProt Consortium, see https://www.uniprot.org/terms Distributed under the Creative Commons Attribution (CC BY 4.0) License
+[2023-03-24T22:00:47.529+0000] {subprocess.py:93} INFO - </copyright>
+[2023-03-24T22:00:47.529+0000] {subprocess.py:93} INFO - </uniprot>
+[2023-03-24T22:00:47.529+0000] {subprocess.py:93} INFO - Fri Mar 24 22:00:01 UTC 2023 running...
+[2023-03-24T22:00:47.529+0000] {subprocess.py:97} INFO - Command exited with return code 0
+[2023-03-24T22:00:47.549+0000] {warnings.py:110} WARNING - /home/***/.local/lib/python3.7/site-packages/***/models/baseoperator.py:1376: RemovedInAirflow3Warning: Passing 'execution_date' to 'TaskInstance.xcom_push()' is deprecated.
+  context["ti"].xcom_push(key=key, value=value, execution_date=execution_date)
+
+[2023-03-24T22:00:47.574+0000] {taskinstance.py:1326} INFO - Marking task as SUCCESS. dag_id=process_xml, task_id=processing_uniprot_xml, execution_date=20230324T220041, start_date=20230324T220042, end_date=20230324T220047
+[2023-03-24T22:00:47.630+0000] {local_task_job.py:212} INFO - Task exited with return code 0
+[2023-03-24T22:00:47.651+0000] {taskinstance.py:2585} INFO - 0 downstream tasks scheduled from follow-on schedule check

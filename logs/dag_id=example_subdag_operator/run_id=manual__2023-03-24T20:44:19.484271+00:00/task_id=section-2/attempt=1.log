@@ -1,0 +1,50 @@
+[2023-03-24T20:45:22.464+0000] {taskinstance.py:1084} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: example_subdag_operator.section-2 manual__2023-03-24T20:44:19.484271+00:00 [queued]>
+[2023-03-24T20:45:22.472+0000] {taskinstance.py:1084} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: example_subdag_operator.section-2 manual__2023-03-24T20:44:19.484271+00:00 [queued]>
+[2023-03-24T20:45:22.473+0000] {taskinstance.py:1282} INFO - 
+--------------------------------------------------------------------------------
+[2023-03-24T20:45:22.473+0000] {taskinstance.py:1283} INFO - Starting attempt 1 of 3
+[2023-03-24T20:45:22.473+0000] {taskinstance.py:1284} INFO - 
+--------------------------------------------------------------------------------
+[2023-03-24T20:45:22.487+0000] {taskinstance.py:1303} INFO - Executing <Task(SubDagOperator): section-2> on 2023-03-24 20:44:19.484271+00:00
+[2023-03-24T20:45:22.491+0000] {standard_task_runner.py:55} INFO - Started process 2316 to run task
+[2023-03-24T20:45:22.493+0000] {standard_task_runner.py:82} INFO - Running: ['***', 'tasks', 'run', 'example_subdag_operator', 'section-2', 'manual__2023-03-24T20:44:19.484271+00:00', '--job-id', '46', '--raw', '--subdir', '/home/***/.local/lib/python3.7/site-packages/***/example_dags/example_subdag_operator.py', '--cfg-path', '/tmp/tmp4rzam7gt']
+[2023-03-24T20:45:22.494+0000] {standard_task_runner.py:83} INFO - Job 46: Subtask section-2
+[2023-03-24T20:45:22.548+0000] {task_command.py:388} INFO - Running <TaskInstance: example_subdag_operator.section-2 manual__2023-03-24T20:44:19.484271+00:00 [running]> on host e7c16d9fd17d
+[2023-03-24T20:45:22.622+0000] {taskinstance.py:1511} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=example_subdag_operator
+AIRFLOW_CTX_TASK_ID=section-2
+AIRFLOW_CTX_EXECUTION_DATE=2023-03-24T20:44:19.484271+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=manual__2023-03-24T20:44:19.484271+00:00
+[2023-03-24T20:45:22.622+0000] {warnings.py:110} WARNING - /home/***/.local/lib/python3.7/site-packages/***/utils/context.py:205: AirflowContextDeprecationWarning: Accessing 'execution_date' from the template is deprecated and will be removed in a future version. Please use 'data_interval_start' or 'logical_date' instead.
+  warnings.warn(_create_deprecation_warning(key, self._deprecation_replacements[key]))
+
+[2023-03-24T20:45:22.651+0000] {subdag.py:171} INFO - Created DagRun: scheduled__2023-03-24T20:44:19.484271+00:00
+[2023-03-24T20:51:55.768+0000] {local_task_job.py:277} WARNING - State of this instance has been externally set to up_for_retry. Terminating instance.
+[2023-03-24T20:51:55.770+0000] {process_utils.py:133} INFO - Sending Signals.SIGTERM to group 2316. PIDs of all processes in the group: [2316]
+[2023-03-24T20:51:55.770+0000] {process_utils.py:84} INFO - Sending the signal Signals.SIGTERM to group 2316
+[2023-03-24T20:51:55.770+0000] {taskinstance.py:1482} ERROR - Received SIGTERM. Terminating subprocesses.
+[2023-03-24T20:51:55.784+0000] {taskinstance.py:1775} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/taskinstance.py", line 1523, in _execute_task_with_callbacks
+    result = self._execute_task(context, task_orig)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/taskinstance.py", line 1588, in _execute_task
+    result = execute_callable(context=context)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/sensors/base.py", line 226, in execute
+    time.sleep(self._get_next_poke_interval(started_at, run_duration, try_number))
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/taskinstance.py", line 1483, in signal_handler
+    raise AirflowTermSignal("Task received SIGTERM signal")
+airflow.exceptions.AirflowTermSignal: Task received SIGTERM signal
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/taskinstance.py", line 1377, in _run_raw_task
+    self._execute_task_with_callbacks(context, test_mode)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/taskinstance.py", line 1530, in _execute_task_with_callbacks
+    raise AirflowException("Task received SIGTERM signal")
+airflow.exceptions.AirflowException: Task received SIGTERM signal
+[2023-03-24T20:51:55.789+0000] {taskinstance.py:1326} INFO - Marking task as UP_FOR_RETRY. dag_id=example_subdag_operator, task_id=section-2, execution_date=20230324T204419, start_date=20230324T204522, end_date=20230324T205155
+[2023-03-24T20:51:55.805+0000] {standard_task_runner.py:105} ERROR - Failed to execute job 46 for task section-2 (Task received SIGTERM signal; 2316)
+[2023-03-24T20:51:55.822+0000] {process_utils.py:79} INFO - Process psutil.Process(pid=2316, status='terminated', exitcode=1, started='20:45:22') (2316) terminated with exit code 1
