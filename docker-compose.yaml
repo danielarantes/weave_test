@@ -86,6 +86,22 @@ x-airflow-common:
       condition: service_healthy
 
 services:
+  neo4j:
+    image: neo4j:latest
+    expose:
+      - 7474
+      - 7687
+    volumes:
+      # uses the same base dir as airflow
+      - ${AIRFLOW_PROJ_DIR:-.}/neo4j/data:/data
+    # TODO: how to do the healthcheck?
+    # healthcheck:
+    #   test: ["CMD", "pg_isready", "-U", "airflow"]
+    #   interval: 10s
+    #   retries: 5
+    #   start_period: 5s
+    restart: always
+
   postgres:
     image: postgres:13
     environment:
