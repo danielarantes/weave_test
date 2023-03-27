@@ -16,7 +16,7 @@ This repo defines a simple data ingestion pipeline that will read a (simulated) 
 
 After a successful run you should be able to see this in neo4j console.
 
-![](images/paste-1.png)
+![](images/paste-2.png)
 
 ## DAG dependencies
 

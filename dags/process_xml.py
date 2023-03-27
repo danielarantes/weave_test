@@ -125,6 +125,69 @@ with DAG(
             #print(relation_stmt)
             return relation_stmt
 
+        def create_author_records(authors, author_refs, ref_title):
+            stmt_list = []
+            for author in authors:
+                # if the author was not created yet, create it and make the relationship
+                if author not in author_refs.keys():
+                    author_refs[author] = [ref_title]
+                    relation_stmt = f"""
+                        create(a:Author {{name: '{author}'}})
+                        with a
+                        match (r:Reference)
+                        where r.title = '{ref_title}'
+                        create (r)-[rel:HAS_REFERENCE]->(a)
+                        return type(rel)
+                    """
+                # if it was previously created, match it and create the relationship
+                else:
+                    author_refs[author].append(ref_title)
+                    relation_stmt = f"""
+                        match (r:Reference), (a:Author)
+                        where r.title = '{ref_title}'
+                        and a.name = '{author}'
+                        create (r)-[rel:HAS_REFERENCE]->(a)
+                        return type(rel)
+                    """
+                #print(relation_stmt)
+                stmt_list.append(relation_stmt)
+
+            return author_refs, stmt_list
+        
+        def create_reference_records(references_list, protein_id):
+            references = {}
+            author_refs = {}
+            stmts = []
+            for r in references_list:
+                authors = r.authors.split(',')
+                authors = [author.strip() for author in authors]
+                ref = {
+                    'title': r.title, 
+                    'comment': r.comment,
+                    'consrtm': r.consrtm,
+                    'journal': r.journal,
+                    'medline_id': r.medline_id,
+                    'pubmed_id': r.pubmed_id
+                }
+
+                ref_attributes = re.sub("'([a-zA-z]+)':", r"\1:", str(ref))
+
+                ref_stmt = f"""
+                    create(r:Reference {ref_attributes})
+                    with r
+                    match (p:Protein)
+                    where p.id = '{protein_id}'
+                    create (p)-[rel:HAS_REFERENCE]->(r)
+                    return type(rel)
+                """
+                print(ref_stmt)
+                stmts.append(ref_stmt)
+                
+                author_refs, authors_stmts = create_author_records(authors = authors, author_refs = author_refs, ref_title = r.title)
+                for stmt in authors_stmts:
+                    stmts.append(stmt)
+            return stmts
+        
         # helper class to deal with neo4j connection + transactions
         class GraphDB:
             def __init__(self, uri, user, password):
@@ -160,7 +223,7 @@ with DAG(
             logger.info("Getting protein record.")
             graph_db_stmts.append(create_protein_record(seq_rec))
             
-            logger.info("Getting annotation records (organism, gene, names).")
+            logger.info("Getting annotation records (organism, gene, names, references, authors).")
             for key, value in seq_rec.annotations.items():
                 if(re.match(pattern = "organism", string = key)):
                     graph_db_stmts.append(create_organism_record(org_name = value, protein_id = protein_id))
@@ -168,6 +231,11 @@ with DAG(
                     graph_db_stmts.append(create_gene_record(gene_names = value, gene_status = key, protein_id = protein_id))
                 elif(re.match(pattern = "recommendedName_.*", string = key)):
                     graph_db_stmts.append(create_name_record(name_list = value, name_type = key, protein_id = protein_id))
+                elif(re.match(pattern = "references", string = key)):
+                    reference_stmts = create_reference_records(references_list = value, protein_id = protein_id)
+                    print(reference_stmts)
+                    for stmt in reference_stmts:
+                        graph_db_stmts.append(stmt)
 
             logger.info("Getting feature records.")
             for f in seq_rec.features:
